@@ -1,3 +1,27 @@
-.active{
+.active__Object{
+    font-family: Roboto;
+    color: black;
+    border: 1px solid gray;
+}
+
+.active__ObjectName{
     font-size: 24px;
+}
+
+.active__ObjectAddress{
+    font-size: 16px;
+}
+
+.active__ObjectArrow{
+    display: inline-block;
+    transform: rotate(90deg);
+    font-size: 20px;
+}
+
+.active__ObjectDelivery{
+    font-size: 16px;
+}
+
+.DropdownMenuItem{
+
 }

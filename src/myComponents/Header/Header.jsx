@@ -1,13 +1,11 @@
 import React from 'react';
-import classes from './Header.module.css';
+import style from './Header.module.css';
 import DropdownMenu from './DropdownMenu.jsx';
 
 function Header(props){
-    console.log(classes.qwerty);
     return (
-        <header className={classes.header}>
+        <header className={style.header}>
             <DropdownMenu/>
-            {classes.qwerty}
         </header>
     )
 }
