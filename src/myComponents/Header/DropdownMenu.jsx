@@ -1,15 +1,20 @@
 import React from 'react';
 import classes from './DropdownMenu.module.css';
 import DropdownMenuItem from './DropdownMenuItem.jsx';
-
-function DropdownMenu(props){
-    return (
-        <div>
-            {props.dropdown.map(item => (
-                <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery}/>
-            ))}
-        </div>
-    )
+class DropdownMenu extends React.Component {
+    constructor(props) {
+        super(props);
+        this.props = props;
+    }
+    render(){
+        return (
+            <div>
+                {this.props.dropdown.map((item, index) => (
+                    <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index}/>
+                ))}
+            </div>
+        )
+    }
 }
 
 export default DropdownMenu;
