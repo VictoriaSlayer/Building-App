@@ -1,4 +1,6 @@
 .main__container{
     max-width: 500px;
     /* background-color: rgb(176, 95, 95); */
+    height: 100vh;
+    position: relative;
 }
