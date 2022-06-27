@@ -12,12 +12,10 @@ function Li(props){
 class DropdownMenuItem extends React.Component {
     constructor(props){
         super(props);
-        this.props = props;
     }
 
     componentDidMount() {
         let elem = document.querySelector(`.${style.DropdownMenuItem}`);
-        console.log(elem);
     }
 
     componentWillUnmount() {

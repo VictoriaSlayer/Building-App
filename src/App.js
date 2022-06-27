@@ -8,7 +8,6 @@ function App(props) {
     <div className={classes.main__container}>
       <Header dropdown={props.dropdown}/>
       <Footer dropdown={props.dropdown}/>
-
     </div>
   );
 }

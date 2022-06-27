@@ -11,20 +11,18 @@ import {ReactComponent as Message} from './../../Images/Icons/message.svg';
 import {ReactComponent as Calc} from './../../Images/Icons/calc.svg';
 import {ReactComponent as Graph} from './../../Images/Icons/graph.svg';
 
-const iconsArray = ["Organization", "Worker", "Photo", "Message", "Calc", "Graph"];
+const iconsArray = [Organization, Worker, Photo, Message, Calc, Graph];
+
 
 function Footer(props) {
     return(
         <BrowserRouter>
-            {/* <div className={style.footer}>
-                <FooterItem/>
-                <Graph/>
-            </div> */}
-            {iconsArray.map(item => {
-                // console.log(`${item}`);
-                 return `<Link><${item}/></Link>`
-            })}
-            <Graph/>
+            <div className={style.footer}>
+                {iconsArray.map(Item => {
+                    return <Link to="/arhitector"><Item/></Link>
+                })}
+            </div>
+
         </BrowserRouter>
     )
 }

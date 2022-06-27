@@ -4,7 +4,6 @@ import DropdownMenuItem from './DropdownMenuItem.jsx';
 class DropdownMenu extends React.Component {
     constructor(props) {
         super(props);
-        this.props = props;
     }
     render(){
         return (
