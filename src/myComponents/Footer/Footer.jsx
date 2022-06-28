@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 import style from "./Footer.module.css";
-import FooterItem from "./FooterItem.jsx";
 
 import {ReactComponent as Organization} from './../../Images/Icons/organization.svg';
 import {ReactComponent as Worker} from './../../Images/Icons/worker.svg';
@@ -11,17 +10,19 @@ import {ReactComponent as Message} from './../../Images/Icons/message.svg';
 import {ReactComponent as Calc} from './../../Images/Icons/calc.svg';
 import {ReactComponent as Graph} from './../../Images/Icons/graph.svg';
 
-const iconsArray = [Organization, Worker, Photo, Message, Calc, Graph];
+const iconsArray = [[Organization, "Объекты"], [Worker, "Рабочие"], [Photo, "Фото-ОСК"], [Message, "Замечания"], [Calc, "Кальк-р"], [Graph, "ПТО"]];
 
 
 function Footer(props) {
     return(
         <BrowserRouter>
-            <div className={style.footer}>
+            <nav className={style.footer__nav}>
                 {iconsArray.map(Item => {
-                    return <Link to="/arhitector"><Item/></Link>
+                    const Svg = Item[0];
+                    const navText = <span>{Item[1]}</span>;
+                    return <Link to="/arhitector"><Svg/>{navText}</Link>
                 })}
-            </div>
+            </nav>
 
         </BrowserRouter>
     )

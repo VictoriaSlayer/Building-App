@@ -5,7 +5,7 @@ import DropdownMenu from './DropdownMenu.jsx';
 function Header(props){
     return (
         <header className={style.header}>
-            <DropdownMenu dropdown={props.dropdown}/>
+            {/* <DropdownMenu dropdown={props.dropdown}/> */}
         </header>
     )
 }
