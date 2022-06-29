@@ -4,10 +4,11 @@ import DropdownMenu from './DropdownMenu.jsx';
 import MyComponent from './myComponent.jsx';
 
 function Header(props){
+
     return (
         <header className={style.header}>
-            <MyComponent/>
-            {/* <DropdownMenu dropdown={props.dropdown}/> */}
+            {/* <MyComponent/> */}
+            <DropdownMenu data={props.data}/>
         </header>
     )
 }

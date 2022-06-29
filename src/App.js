@@ -6,8 +6,8 @@ import classes from './App.module.css';
 function App(props) {
   return (
     <div className={classes.main__container}>
-      <Header dropdown={props.dropdown}/>
-      <Footer dropdown={props.dropdown}/>
+      <Header data={props}/>
+      <Footer data={props}/>
     </div>
   );
 }

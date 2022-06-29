@@ -25,3 +25,7 @@
 .DropdownMenuItem{
 
 }
+
+.non-active{
+    display: none;
+}
