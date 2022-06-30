@@ -6,7 +6,7 @@ class DropdownMenu extends React.Component {
         super(props);
     }
     render(){
-        // преобразовываем данные со стейта в массив и маппим их после
+        // преобразовываем данные с пропсов в массив и маппим их после
         const dataObject = this.props.data.data;
         const dropdownObjects = [];
         for(let i in dataObject){
@@ -15,7 +15,7 @@ class DropdownMenu extends React.Component {
 
         const dropdownStrings = dropdownObjects.map((item, index) => {
             return (
-                <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index} active={index == 0 ? "active" : "non-active"} />
+                <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index} visibility = {index == 0 ? "visible" : "hidden"} />
             );
         });
         return (

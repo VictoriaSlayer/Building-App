@@ -6,8 +6,8 @@ import classes from './App.module.css';
 function App(props) {
   return (
     <div className={classes.main__container}>
-      <Header data={props}/>
-      <Footer data={props}/>
+      <Header data={props.data}/>
+      <Footer data={props.data}/>
     </div>
   );
 }

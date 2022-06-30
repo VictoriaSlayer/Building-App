@@ -17,10 +17,10 @@ However it takes a lot of time, to found answers for this questions. And however
 <p>Below is the design of the application I made, as I add functionality, I will add pictures or gifs for a more complete overview.</p>
 
 <br>
-<img src="./New template/Promo/Main.jpg" width="350px" alt="Main view">
+<img src="./New template/Promo/Main.jpg" width="250px" alt="Main view">
 <br>
-<img src="./New template/Promo/Main 2.jpg" width="350px" alt="Dropdown menu. I think it chould be reworked, but has no idea now.">
+<img src="./New template/Promo/Main 2.jpg" width="250px" alt="Dropdown menu. I think it chould be reworked, but has no idea now.">
 <br>
-<img src="./New template/Promo/Main 3.jpg" width="350px" alt="Summary of workers. Google API.">
+<img src="./New template/Promo/Main 3.jpg" width="250px" alt="Summary of workers. Google API.">
 <br>
-<img src="./New template/Promo/Main 3.jpg" width="350px" alt="Summary of workers. Expanding table">
+<img src="./New template/Promo/Main 3.jpg" width="250px" alt="Summary of workers. Expanding table">
