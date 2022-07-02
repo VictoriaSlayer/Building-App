@@ -13,33 +13,16 @@ class DropdownMenuItem extends React.Component {
 
     constructor(props){
         super(props);
-
-        this.visibility = this.props.visibility;
-        this.clicked = this.clicked.bind(this);
-        console.log(this);
     }
 
-    clicked(){
-        this.setState({
-            visibility: "123123123",
-        })
-    }
-
-    componentDidMount() {
-        let elem = document.querySelector(`.${style.DropdownMenuItem}`);
-        elem.addEventListener("click", this.clicked);
-    }
-
-    componentWillUnmount() {
-
+    clicked = () => {
+        this.props.clicked(this.props.id);
     }
 
     render() {
-        let visibility = this.visibility;
         return (
             <BrowserRouter>
-                <div className={`${style.DropdownMenuItem} ${style[visibility]}`}>
-                    <Link to="/arhitector">Меня </Link>
+                <div className={`${style.DropdownMenuItem}`} onClick={this.clicked}>
                     <Link to="/arhitector/object">Нажмиии</Link>
                     <div className={`${style.active__Object} ${style.active__ObjectName}`} >
                         {this.props.name} <span className={`${style.active__Objec} ${style.active__ObjectArrow}`}>{`>`}</span>
