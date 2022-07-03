@@ -1,15 +1,26 @@
+/* Styles for border bottom*/
+.dropdownMenuWrapper{
+    padding-bottom: 2px;
+    background: linear-gradient(to left, #860909e9, #9b0c0ce8);
+}
+
+/* Common styles for every menu */
+.dropdownMenuItem{
+    padding: 7px 0 7px 10px;
+    background: linear-gradient(to left, #cc3333, #f15c22);
+}
+
 .active__Object{
     font-family: Roboto;
     color: black;
-    border: 1px solid gray;
 }
 
 .active__ObjectName{
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .active__ObjectAddress{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .active__ObjectArrow{
@@ -19,13 +30,5 @@
 }
 
 .active__ObjectDelivery{
-    font-size: 16px;
-}
-
-.DropdownMenuItem{
-
-}
-
-.hidden{
-    display: none;
+    font-size: 15px;
 }

@@ -23,4 +23,4 @@ However it takes a lot of time, to found answers for this questions. And however
 <br>
 <img src="./New template/Promo/Main 3.jpg" width="250px" alt="Summary of workers. Google API.">
 <br>
-<img src="./New template/Promo/Main 3.jpg" width="250px" alt="Summary of workers. Expanding table">
+<img src="./New template/Promo/Main 4.jpg" width="250px" alt="Summary of workers. Expanding table">

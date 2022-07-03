@@ -22,8 +22,8 @@ class DropdownMenuItem extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div className={`${style.DropdownMenuItem}`} onClick={this.clicked}>
-                    <Link to="/arhitector/object">Нажмиии</Link>
+            <div className={`${style.dropdownMenuWrapper}`}>
+                <div className={`${style.dropdownMenuItem}`} onClick={this.clicked}>
                     <div className={`${style.active__Object} ${style.active__ObjectName}`} >
                         {this.props.name} <span className={`${style.active__Objec} ${style.active__ObjectArrow}`}>{`>`}</span>
                     </div>
@@ -34,6 +34,7 @@ class DropdownMenuItem extends React.Component {
                         планируемая сдача: {this.props.objectDelivery}
                     </div>
                 </div>
+            </div>
 
                 <Routes>
                     <Route path="/arhitector" element={<Li txt="нажми меня"/>}/>

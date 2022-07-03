@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 import style from "./Footer.module.css";
 
+// Import svg icons, cause, there are only 6 of them
 import {ReactComponent as Organization} from './../../Images/Icons/organization.svg';
 import {ReactComponent as Worker} from './../../Images/Icons/worker.svg';
 import {ReactComponent as Photo} from './../../Images/Icons/photo.svg';
@@ -16,7 +17,7 @@ const iconsArray = [[Organization, "Объекты"], [Worker, "Рабочие"]
 function Footer(props) {
     return(
         <BrowserRouter>
-            <nav className={style.footer__nav}>
+            <nav className={`${style.footer__nav}`}>
                 {iconsArray.map(Item => {
                     const Svg = Item[0];
                     const navText = <span>{Item[1]}</span>;

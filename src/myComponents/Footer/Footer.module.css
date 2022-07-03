@@ -1,7 +1,7 @@
 .footer__nav{
     position: absolute;
-    display:flex;
-    justify-content:space-around;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 80px;
@@ -9,17 +9,28 @@
     bottom: 0;
 }
 
+.footer__nav::before{
+    position: absolute;
+    height: 15px;
+    top: 0;
+    background-color: red;
+}
+
+/* Button styles  */
+
 .footer__nav *{
     display: block;
     margin: 0 auto;
     padding: 3px;
     font-family: roboto;
-    font-size: 12px;
+    font-size: calc(11px + .1em);
     text-align: center;
     text-decoration: none;
     color: #696969;
+    white-space: nowrap;
 }
 
+/* SVG icons style */
 .footer__nav * :first-child{
     min-width: 35px;
     width: 50%;

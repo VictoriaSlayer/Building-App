@@ -42,7 +42,7 @@ class DropdownMenu extends React.Component {
         });
 
         return (
-            <div>
+            <div className = {style.DropdownMenu}>
                 {dropdownStrings}
             </div>
         )
