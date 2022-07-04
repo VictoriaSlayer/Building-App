@@ -24,6 +24,7 @@ class DropdownMenu extends React.Component {
     render(){
         // преобразовываем данные с пропсов в массив и маппим их после
         const dataObject = this.props.data.data;
+        console.log(dataObject);
         const dropdownObjects = [];
         if(this.state.opened === false){
             dropdownObjects.push(dataObject[this.state.choosenId].dropdownmenu);

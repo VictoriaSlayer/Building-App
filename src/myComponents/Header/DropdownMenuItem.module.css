@@ -5,8 +5,10 @@
 }
 
 /* Common styles for every menu */
+/* relative pos hide footer shadow */
 .dropdownMenuItem{
-
+    position: relative;
+    z-index: 1;
     padding: 7px 0 7px 10px;
     background: linear-gradient(to left, #cc3333, #f15c22);
 }
