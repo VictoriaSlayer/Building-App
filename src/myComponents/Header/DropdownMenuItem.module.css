@@ -11,6 +11,7 @@
     z-index: 1;
     padding: 7px 0 7px 10px;
     background: linear-gradient(to left, #cc3333, #f15c22);
+    /* text-decoration: none; */
 }
 
 .active__Object{
@@ -34,4 +35,8 @@
 
 .active__ObjectDelivery{
     font-size: 15px;
+}
+
+a{
+    text-decoration: none;
 }
