@@ -5,12 +5,12 @@ let State = [
             address: 'ул. Академика Волгина, 2А, Москва',
             objectDelivery: '4 квартал 2023',
             id: 0,
-        },
-        links: {
-            dropdown: "/arhitector",
-            object: "/arhitector/companies",
-            objectZkazcik: "/arhitector/zakazchik",
-        },
+            links: {
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            }
+        }
     },
     {
         dropdownmenu: {
@@ -18,9 +18,11 @@ let State = [
             address: 'ул. Шеногина, вл. 2, Москва',
             objectDelivery: '1 квартал 2023',
             id: 1,
-        },
-        links:{
-
+            links:{
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            },
         },
     },
     {
@@ -29,9 +31,11 @@ let State = [
             address: 'ул. Вильгельма Пика, вл. 3, Москва',
             objectDelivery: '4 квартал 2023',
             id: 2,
-        },
-        links:{
-
+            links:{
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            },
         },
     },
     {
@@ -40,9 +44,11 @@ let State = [
             address: 'ул. Варшавское шоссе, 37А/1, Москва',
             objectDelivery: '1 квартал 2025',
             id: 3,
-        },
-        links:{
-
+            links:{
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            },
         },
     },
     {
@@ -51,9 +57,11 @@ let State = [
             address: 'ул. Строительный проезд, 9, Москва',
             objectDelivery: '2 кв. 2025 г.',
             id: 4,
-        },
-        links:{
-
+            links:{
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            },
         },
     },
     {
@@ -62,9 +70,11 @@ let State = [
             address: 'р.п. Заречье, ул. Торговая, МО',
             objectDelivery: '2 кв. 2024 г.',
             id: 4,
-        },
-        links:{
-
+            links:{
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            },
         },
     },
     {
@@ -73,9 +83,11 @@ let State = [
             address: 'ул. Красная Сосна, д. 3, Москва',
             objectDelivery: '4 кв. 2021 г.',
             id: 4,
-        },
-        links:{
-
+            links:{
+                dropdown: "/arhitector",
+                object: "/arhitector/companies",
+                objectZkazcik: "/arhitector/zakazchik",
+            },
         },
     },
 ];
