@@ -1,0 +1,13 @@
+.companiesHeader{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    background-color: #dedede;
+}
+a{
+    text-decoration: none;
+}
+.companiesTypes{
+    color: #696969;
+}

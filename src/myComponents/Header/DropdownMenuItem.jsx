@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './DropdownMenuItem.module.css';
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import Companies from './../Companies/Companies';
 
 function Li(props){
     return (
@@ -37,7 +38,7 @@ class DropdownMenuItem extends React.Component {
             </div>
 
                 <Routes>
-                    <Route path="/arhitector" element={<Li txt="нажми меня"/>}/>
+                    <Route path="/arhitector" element={<Companies txt="нажми меня"/>}/>
                 </Routes>
             </BrowserRouter>
         )

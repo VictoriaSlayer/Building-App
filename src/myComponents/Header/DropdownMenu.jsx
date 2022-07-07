@@ -26,13 +26,16 @@ class DropdownMenu extends React.Component {
         const dataObject = this.props.data.data;
         console.log(dataObject);
         const dropdownObjects = [];
+        const dropdownLinks = [];
         if(this.state.opened === false){
             dropdownObjects.push(dataObject[this.state.choosenId].dropdownmenu);
+            dropdownLinks.push(dataObject[this.state.choosenId].links);
         }
         else{
             dropdownObjects.push(dataObject[this.state.choosenId].dropdownmenu);
             for(let i in dataObject){
                 dropdownObjects.push(dataObject[i].dropdownmenu);
+                dropdownLinks.push(dataObject[i].links);
             }
         }
 

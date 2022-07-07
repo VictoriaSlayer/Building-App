@@ -1,0 +1,9 @@
+.DropdownMenu{
+    max-height: calc(100vh - 75px);
+    overflow: scroll;
+}
+
+/* hide scrollbar when dropdown is opened */
+.DropdownMenu::-webkit-scrollbar {
+    display: none;
+}

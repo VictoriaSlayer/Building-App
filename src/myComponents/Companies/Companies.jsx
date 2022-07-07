@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CompaniesHeader from './CompaniesHeader';
 class Companies extends React.Component {
     constructor(props){
         super(props);
@@ -8,7 +8,7 @@ class Companies extends React.Component {
 
     render(){
         return(
-            <div>12345</div>
+            <CompaniesHeader/>
         )
     }
 }
