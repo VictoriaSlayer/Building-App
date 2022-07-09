@@ -40,7 +40,7 @@ class DropdownMenu extends React.Component {
                 }
             }
 
-            // При открытом меню, состояние стейта меняется. И по дефолту поведение компонента DropdownMenuItem рендерит все остальное меню, что не очень хорошо с точки зрения производительности. Поэтому придумал заглушку в виде ListDropdownMenuItem
+            // По дефолту поведение компонента DropdownMenuItem рендерит все остальные компоненты, которые мы передаем ему через пропсы, что не очень хорошо с точки зрения производительности. Поэтому придумал заглушку в виде ListDropdownMenuItem, которая отрисовывает те же дропдауны, но не отрисовывает все остальные элементы.
             let dropdownStrings = [];
             if(dropdownObjects.length === 1){
                 dropdownStrings = dropdownObjects.map((item, index) => {
@@ -51,9 +51,10 @@ class DropdownMenu extends React.Component {
             }
             else{
                 dropdownStrings = dropdownObjects.map((item, index) => {
-                    return (
-                        <ListDropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index} clicked={this.clickedItem} id = {item.id} links = {item.links}/>
-                        );
+                    // Оставляем кавычку только в первой менюшке дропдауна и убираем во всех остальных
+                    return index === 0 ?
+                        (<ListDropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index} clicked={this.clickedItem} id = {item.id} links = {item.links} quotes=">"/>):
+                        (<ListDropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index} clicked={this.clickedItem} id = {item.id} links = {item.links} quotes=""/>);
                     });
             }
 
