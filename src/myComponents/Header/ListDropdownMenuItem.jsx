@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './DropdownMenuItem.module.css';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import Companies from './../Companies/Companies';
-class DropdownMenuItem extends React.Component {
+// import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import Companies from '../Companies/Companies';
+class ListDropdownMenuItem extends React.Component {
 
     constructor(props){
         super(props);
@@ -14,8 +14,8 @@ class DropdownMenuItem extends React.Component {
 
     render() {
         return (
-            <BrowserRouter>
-            <Link to={this.props.links.dropdown}>
+            <div>
+
                 <div className={`${style.dropdownMenuWrapper}`}>
                     <div className={`${style.dropdownMenuItem}`} onClick={this.clicked}>
                         <div className={`${style.active__Object} ${style.active__ObjectName}`} >
@@ -29,14 +29,9 @@ class DropdownMenuItem extends React.Component {
                         </div>
                     </div>
                 </div>
-            </Link>
-            <Routes>
-                <Route path="/arhitector" element={<Companies txt="нажми меня"/>}/>
-                <Route path={this.props.links.dropdown} element={<Companies txt="нажми меня"/>}/>
-            </Routes>
-            </BrowserRouter>
+            </div>
         )
     }
 }
 
-export default DropdownMenuItem;
+export default ListDropdownMenuItem;

@@ -9,5 +9,7 @@ a{
     text-decoration: none;
 }
 .companiesTypes{
+    padding-left: 20px;
     color: #696969;
+    font-family: Roboto;
 }
