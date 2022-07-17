@@ -3,7 +3,6 @@ import CompaniesHeader from './CompaniesHeader';
 class Companies extends React.Component {
     constructor(props){
         super(props);
-
     }
 
     render(){

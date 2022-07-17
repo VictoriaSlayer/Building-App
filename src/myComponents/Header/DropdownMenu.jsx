@@ -63,18 +63,6 @@ class DropdownMenu extends React.Component {
                     {dropdownStrings}
                 </div>
             )
-
-            // const dropdownStrings = dropdownObjects.map((item, index) => {
-            //     return (
-            //         <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={index} clicked={this.clickedItem} id = {item.id} links = {item.links}/>
-            //         );
-            //     });
-
-            // return (
-            //     <div className = {style.DropdownMenu}>
-            //         {dropdownStrings}
-            //     </div>
-            // )
         }
     }
 

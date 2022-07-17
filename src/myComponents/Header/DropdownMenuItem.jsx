@@ -2,6 +2,7 @@ import React from 'react';
 import style from './DropdownMenuItem.module.css';
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import Companies from './../Companies/Companies';
+import Footer from './../Footer/Footer';
 class DropdownMenuItem extends React.Component {
 
     constructor(props){
@@ -13,6 +14,7 @@ class DropdownMenuItem extends React.Component {
     }
 
     render() {
+
         return (
             <BrowserRouter>
             <Link to={this.props.links.dropdown}>
@@ -31,8 +33,8 @@ class DropdownMenuItem extends React.Component {
                 </div>
             </Link>
             <Routes>
-                <Route path="/arhitector" element={<Companies txt="нажми меня"/>}/>
-                <Route path={this.props.links.dropdown} element={<Companies txt="нажми меня"/>}/>
+                <Route path={this.props.links.dropdown} element={<Companies links={this.props.links}/>}/>
+                <Route />
             </Routes>
             </BrowserRouter>
         )

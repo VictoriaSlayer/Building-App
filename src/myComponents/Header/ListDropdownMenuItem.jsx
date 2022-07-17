@@ -1,7 +1,5 @@
 import React from 'react';
 import style from './DropdownMenuItem.module.css';
-// import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import Companies from '../Companies/Companies';
 class ListDropdownMenuItem extends React.Component {
 
     constructor(props){
