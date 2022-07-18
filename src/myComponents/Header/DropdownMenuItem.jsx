@@ -14,14 +14,12 @@ class DropdownMenuItem extends React.Component {
     }
 
     render() {
-
         return (
-            <BrowserRouter>
             <Link to={this.props.links.dropdown}>
                 <div className={`${style.dropdownMenuWrapper}`}>
                     <div className={`${style.dropdownMenuItem}`} onClick={this.clicked}>
                         <div className={`${style.active__Object} ${style.active__ObjectName}`} >
-                            {this.props.name} <span className={`${style.active__Objec} ${style.active__ObjectArrow}`}>{`>`}</span>
+                            {this.props.name} <span className={`${style.active__Objec} ${style.active__ObjectArrow}`}>{this.props.quotes}</span>
                         </div>
                         <div className={`${style.active__Object} ${style.active__ObjectAddress}`}>
                             {this.props.address}
@@ -32,11 +30,6 @@ class DropdownMenuItem extends React.Component {
                     </div>
                 </div>
             </Link>
-            <Routes>
-                <Route path={this.props.links.dropdown} element={<Companies links={this.props.links}/>}/>
-                <Route />
-            </Routes>
-            </BrowserRouter>
         )
     }
 }

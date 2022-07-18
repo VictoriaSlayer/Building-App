@@ -4,13 +4,15 @@ import './normolize.css';
 import App from './App';
 import State from './Redux/State';
 import reportWebVitals from './reportWebVitals';
-
+import {BrowserRouter} from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App data={State}/>
+    <BrowserRouter>
+      <App data={State}/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

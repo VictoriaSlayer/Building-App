@@ -8,7 +8,7 @@ function Header(props){
     return (
         <header className={style.header}>
             {/* <MyComponent/> */}
-            <DropdownMenu data={props}/>
+            <DropdownMenu data={props.data}/>
         </header>
     )
 }

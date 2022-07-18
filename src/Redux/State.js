@@ -69,7 +69,7 @@ let State = [
             name:'ЖК Заречный квартал',
             address: 'р.п. Заречье, ул. Торговая, МО',
             objectDelivery: '2 кв. 2024 г.',
-            id: 4,
+            id: 5,
             links:{
                 dropdown: "/zarechnii",
                 object: "/zarechnii/companies",
@@ -82,7 +82,7 @@ let State = [
             name:'ЖК Настроение',
             address: 'ул. Красная Сосна, д. 3, Москва',
             objectDelivery: '4 кв. 2021 г.',
-            id: 4,
+            id: 6,
             links:{
                 dropdown: "/nastroenie",
                 object: "/nastroenie/companies",

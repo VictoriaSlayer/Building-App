@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom";
 import styles from "./CompaniesHeader.module.css";
 import Customer from './CompaniesTypes/Customer';
 import Designer from './CompaniesTypes/Designer';

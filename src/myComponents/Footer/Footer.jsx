@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom";
 
 import style from "./Footer.module.css";
 
@@ -16,7 +16,6 @@ const iconsArray = [[Organization, "Объекты"], [Worker, "Рабочие"]
 
 function Footer(props) {
     return(
-        <BrowserRouter>
             <nav className={`${style.footer__nav}`}>
                 {iconsArray.map(Item => {
                     const Svg = Item[0];
@@ -24,8 +23,6 @@ function Footer(props) {
                     return <Link to="/arhitector"><Svg/>{navText}</Link>
                 })}
             </nav>
-
-        </BrowserRouter>
     )
 }
 
