@@ -1,0 +1,42 @@
+.react-calendar{
+    padding: 10px;
+    font-family: roboto;
+}
+
+/* calendar navigation styles */
+
+.react-calendar__navigation{
+    display: flex;
+    justify-content: space-around;
+}
+
+.react-calendar__navigation *{
+    padding: 5px 0;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #ce3531;
+    text-decoration: none;
+}
+
+.react-calendar__navigation__arrow{
+    padding: 0 20px;
+}
+
+.react-calendar__month-view__weekdays{
+    text-align: center;
+    color: #858b94;
+    padding: 15px 0 15px;
+}
+
+abbr[title]{
+    text-decoration: none;
+}
+
+/* calendar days styles */
+
+.react-calendar__month-view__days button{
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+}

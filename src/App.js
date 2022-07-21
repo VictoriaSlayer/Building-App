@@ -5,6 +5,8 @@ import classes from './App.module.css';
 import Companies from './myComponents/Companies/Companies';
 import {Routes, Route, Link} from "react-router-dom";
 
+import MyCalendar from './myComponents/Calendar/MyCalendar';
+
 function App(props) {
   return (
     <div className={classes.main__container}>
@@ -14,6 +16,7 @@ function App(props) {
             <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links}/>}/>
           )}
         </Routes>
+        <MyCalendar/>
         <Footer data={props.data}/>
     </div>
   );
