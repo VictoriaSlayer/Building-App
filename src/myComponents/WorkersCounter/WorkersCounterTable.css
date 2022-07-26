@@ -1,0 +1,70 @@
+.workersTable{
+    display: grid;
+    height: calc(100vh - 30vh);
+    overflow: scroll;
+    margin: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0 6px 7px 4px #9b0c0c1c;
+    font-family: Roboto;
+}
+
+@media(max-width:340px){
+    .workersTable__head{
+        font-size: 10px;
+    }
+    .workersTable__body{
+        font-size: 12px;
+    }
+}
+
+@media(max-width:400px){
+    .workersTable__head{
+        font-size: 12px;
+    }
+    .workersTable__body{
+        font-size: 14px;
+    }
+}
+
+
+
+/* HEAD */
+.workersTable__head{
+    padding: 5px 0px;
+    background: linear-gradient(to left, #d22a2ac8, #df490ecb);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* HEAD and BODY */
+.workersTable__headStroke th{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workersTable__headStroke, .workersTable__stroke{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* BODY */
+
+.workersTable__body{
+
+    padding: 5px;
+}
+
+.workersTable__cell{
+    width: 30%;
+}
+
+.workersTable__cell8, .workersTable__cell13, .workersTable__cellPlan, .workersTable__cellDeficit{
+    width: 15%;
+    text-align: center;
+}
+
+.workersTable__body .workersTable__stroke{
+    padding: 10px 0;
+}

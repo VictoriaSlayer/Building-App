@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './myComponents/Header/Header';
 import Footer from './myComponents/Footer/Footer';
-import classes from './App.module.css';
+import styles from './App.module.css';
 import Companies from './myComponents/Companies/Companies';
 import {Routes, Route, Link} from "react-router-dom";
 
@@ -10,17 +10,19 @@ import WorkersCounterTable from './myComponents/WorkersCounter/WorkersCounterTab
 
 function App(props) {
   return (
-    <div className={classes.main__container}>
+      <div className={styles.body__container}>
         <Header data={props.data}/>
-        <Routes>
-          {props.data.map(item =>
-            <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links}/>}/>
-          )}
-        </Routes>
-        <MyCalendar/>
-        {/* <WorkersCounterTable/> */}
+          <div className={styles.main__container}>
+            <Routes>
+              {props.data.map(item =>
+                <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links}/>}/>
+                )}
+            </Routes>
+            {/* <MyCalendar/> */}
+            <WorkersCounterTable/>
+          </div>
         <Footer data={props.data}/>
-    </div>
+      </div>
   );
 }
 
