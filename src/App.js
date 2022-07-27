@@ -7,6 +7,7 @@ import {Routes, Route, Link} from "react-router-dom";
 
 import MyCalendar from './myComponents/Calendar/MyCalendar';
 import WorkersCounterTable from './myComponents/WorkersCounter/WorkersCounterTable';
+import SwiperSlider from './myComponents/Slider/SwiperSlider';
 
 function App(props) {
   return (
@@ -19,7 +20,8 @@ function App(props) {
                 )}
             </Routes>
             {/* <MyCalendar/> */}
-            <WorkersCounterTable/>
+            {/* <WorkersCounterTable/> */}
+            <SwiperSlider/>
           </div>
         <Footer data={props.data}/>
       </div>
