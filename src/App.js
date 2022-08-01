@@ -8,6 +8,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import MyCalendar from './myComponents/Calendar/MyCalendar';
 import WorkersCounterTable from './myComponents/WorkersCounter/WorkersCounterTable';
 import SwiperSlider from './myComponents/Slider/SwiperSlider';
+import Gallery from './myComponents/Gallery/Gallery';
 
 function App(props) {
   return (
@@ -17,11 +18,13 @@ function App(props) {
             <Routes>
               {props.data.map(item =>
                 <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links}/>}/>
-                )}
+              )}
+              <Route path={`gallery/:id`} element={<SwiperSlider />}></Route>
             </Routes>
             {/* <MyCalendar/> */}
             {/* <WorkersCounterTable/> */}
-            <SwiperSlider/>
+            {/* <SwiperSlider/> */}
+            <Gallery/>
           </div>
         <Footer data={props.data}/>
       </div>

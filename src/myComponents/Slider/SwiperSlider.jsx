@@ -1,81 +1,36 @@
 import React, {useState} from 'react';
+
+import { useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {Navigation, Pagination} from 'swiper';
 import '../../../node_modules/swiper/swiper-bundle.css';
 import './SwiperSlider.css';
-// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 SwiperCore.use([Navigation, Pagination]);
 
 function SwiperSlider(){
+  let {id} = useParams();
 
   const slides = [];
 
-
-  for(let i = 1; i < 10; i++) {
+  for(let i = 1; i < 11; i++) {
    slides.push(
-    <SwiperSlide key={`masonry-img${i}`} tag="li"><img  src={`./Photos/${i}.jpg`} alt={`каменная кладка {i}`}/></SwiperSlide>
+    <SwiperSlide key={`masonry-img${i}`} tag="li" containerClass="swiper-zoom-container" zoom="true" toggle="true"><img src={`/Photos/${i}.jpg`} alt={`каменная кладка {i}`}/></SwiperSlide>
     );
   }
 
-
-
   return (
-    <>
     <Swiper tag="section" wrapperTag="ul" id="main"
+    initialSlide={id}
     spaceBetween={0}
-    slidesPerView={3}
+    slidesPerView={1}
     navigation
     pagination
     onSlideToClickedSlide={true}
     >
       {slides}
   </Swiper>
-    </>
   );
 }
 
 export default SwiperSlider;
-
-
-// SwiperCore.use([Navigation, Pagination, Thumbs]);
-
-// function SwiperSlider(){
-//   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-//   const slides = [];
-//   const thumbs = [];
-
-//   for(let i = 1; i < 10; i++) {
-//    slides.push(
-//     <SwiperSlide key={`masonry-img${i}`} tag="li"><img  src={`./Photos/${i}.jpg`} alt={`каменная кладка {i}`}/></SwiperSlide>
-//     );
-//     thumbs.push(
-//       <SwiperSlide key={`masonryThumbs-img${i}`} tag="li"><img  src={`./Photos/${i}.jpg`} alt={`каменная кладка {i}`}/></SwiperSlide>
-//     )
-//   }
-
-
-
-//   return (
-//     <>
-//     <Swiper tag="section" wrapperTag="ul" id="main"
-//     thumbs = {{swiper: thumbsSwiper}}
-//     spaceBetween={0}
-//     slidesPerView={3}
-//     navigation
-//     pagination
-//     >
-//       {slides}
-//   </Swiper>
-//   <Swiper
-//   id="thumbs"
-//   spaceBetween={0}
-//   slidesPerView={4}
-//   onSwiper={setThumbsSwiper}
-
-//   >
-//     {thumbs}
-//   </Swiper>
-//     </>
-//   );
-// }
