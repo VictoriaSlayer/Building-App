@@ -1,6 +1,6 @@
 .swiper-wrapper {
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
   /* background-color: grey; */
@@ -13,4 +13,10 @@
 
 :root {
   --swiper-theme-color: #ff8f32;
+}
+
+.swiper{
+  margin-top: -75px;
+  height: 100vh;
+
 }

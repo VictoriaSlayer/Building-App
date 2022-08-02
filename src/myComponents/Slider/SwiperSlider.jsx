@@ -6,6 +6,8 @@ import SwiperCore, {Navigation, Pagination} from 'swiper';
 import '../../../node_modules/swiper/swiper-bundle.css';
 import './SwiperSlider.css';
 
+import {Routes, Route} from "react-router-dom";
+
 SwiperCore.use([Navigation, Pagination]);
 
 function SwiperSlider(){
@@ -20,16 +22,19 @@ function SwiperSlider(){
   }
 
   return (
-    <Swiper tag="section" wrapperTag="ul" id="main"
-    initialSlide={id}
-    spaceBetween={0}
-    slidesPerView={1}
-    navigation
-    pagination
-    onSlideToClickedSlide={true}
-    >
-      {slides}
-  </Swiper>
+    <>
+      <Swiper tag="section" wrapperTag="ul" id="main"
+      initialSlide={id}
+      spaceBetween={0}
+      slidesPerView={1}
+      navigation
+      pagination
+      onSlideToClickedSlide={true}
+      >
+            {slides}
+      </Swiper>
+
+    </>
   );
 }
 
