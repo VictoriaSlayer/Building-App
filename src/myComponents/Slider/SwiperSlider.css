@@ -1,22 +1,25 @@
 .swiper-wrapper {
+  position: fixed;
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
-  /* background-color: grey; */
   list-style: none;
+}
+
+.swiper{
+  margin-top: -75px;
+  height: 100vh;
 }
 
 .swiper-slide img{
   height: 100%;
 }
 
-:root {
-  --swiper-theme-color: #ff8f32;
+.swiper-zoom-container{
+  background-color: rgba(255, 255, 255, 0.402);
 }
 
-.swiper{
-  margin-top: -75px;
-  height: 100vh;
-
+:root {
+  --swiper-theme-color: #ff8f32;
 }
