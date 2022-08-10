@@ -17,7 +17,7 @@ function SwiperSlider(){
 
   for(let i = 0; i < 10; i++) {
    slides.push(
-    <SwiperSlide key={`masonry-img${i}`} tag="li" containerClass="swiper-zoom-container" zoom="true" toggle="true"><img src={`/Photos/${i}.jpg`} alt={`каменная кладка {i}`}/></SwiperSlide>
+    <SwiperSlide key={`masonry-img${i}`} tag="li" containerClass="swiper-zoom-container" zoom="true" toggle="true"><img src={`/Photos/${i}.jpg`} alt={`фото ${i}`}/><button className="closeButton">{'\u00d7'}</button></SwiperSlide>
     );
   }
 
@@ -30,6 +30,8 @@ function SwiperSlider(){
       navigation
       pagination
       onSlideToClickedSlide={true}
+      speed={0}
+      preventInteractionOnTransition = {true}
       >
             {slides}
       </Swiper>

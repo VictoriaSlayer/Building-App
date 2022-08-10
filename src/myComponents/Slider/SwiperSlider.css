@@ -23,3 +23,16 @@
 :root {
   --swiper-theme-color: #ff8f32;
 }
+
+.closeButton{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10vh;
+  height: 10vh;
+  border: none;
+  background-color: transparent;
+  font-size: 5vh;
+  font-weight: bold;
+  color: #ff8f32;
+}
