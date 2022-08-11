@@ -15,7 +15,7 @@ class CompaniesHeader extends React.Component {
         return(
             <div className={styles.companiesHeader}>
                 <Link className={styles.companiesTypes} to="customer">Заказчик</Link>
-                <Link className={styles.companiesTypes} to="designer">Проектанты</Link>
+                <Link className={styles.companiesTypes} to="designer">Проектировщики</Link>
                 <Link className={styles.companiesTypes} to="contractor">Подрядчики</Link>
                 <Routes>
                     <Route path="customer" element={<Customer/>}/>

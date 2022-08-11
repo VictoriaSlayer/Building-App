@@ -1,0 +1,36 @@
+.container{
+    display: grid;
+    grid-template-areas:
+    "logo info"
+    "tasks tasks"
+    ;
+
+    width: 100%;
+    font-family: roboto;
+}
+
+.logo{
+    grid-area: logo;
+    /* width: 20%; */
+}
+.logo img{
+    display: block;
+    width: 75px;
+    /* height: 100px; */
+}
+
+.companyType, .companyName, .companyContacts{
+    grid-area: info;
+}
+/*
+.companyName{
+    grid-area: info;
+}
+
+.companyContacts{
+    grid-area: info;
+} */
+
+.information{
+    grid-area: tasks;
+}

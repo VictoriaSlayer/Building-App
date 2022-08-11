@@ -17,14 +17,14 @@ function App(props) {
           <div className={styles.main__container}>
             <Routes>
               {props.data.map(item =>
-                <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links}/>}/>
+                <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links} companiesData={item.companies.mainCompanies}/>}/>
               )}
               <Route path={`gallery/:id`} element={<SwiperSlider />}></Route>
             </Routes>
             {/* <MyCalendar/> */}
             {/* <WorkersCounterTable/> */}
             {/* <SwiperSlider/> */}
-            <Gallery/>
+            {/* <Gallery/> */}
           </div>
         <Footer data={props.data}/>
       </div>

@@ -10,7 +10,32 @@ let State = [
                 object: "/arhitector/companies",
                 objectZakazchik: "/arhitector/zakazchik",
             }
-        }
+        },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: "",
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                }
+            ]
+        },
     },
     {
         dropdownmenu: {
@@ -23,6 +48,31 @@ let State = [
                 object: "/sydnei/companies",
                 objectZakazchik: "/sydnei/zakazchik",
             },
+        },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }
+            ]
         },
     },
     {
@@ -37,6 +87,31 @@ let State = [
                 objectZakazchik: "/rejisser/zakazchik",
             },
         },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }
+            ]
+        },
     },
     {
         dropdownmenu:{
@@ -49,6 +124,31 @@ let State = [
                 object: "/rotterdam/companies",
                 objectZakazchik: "/rotterdam/zakazchik",
             },
+        },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }
+            ]
         },
     },
     {
@@ -63,6 +163,31 @@ let State = [
                 objectZakazchik: "/sky-garden/zakazchik",
             },
         },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }
+            ]
+        },
     },
     {
         dropdownmenu:{
@@ -76,6 +201,31 @@ let State = [
                 objectZakazchik: "/zarechnii/zakazchik",
             },
         },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }
+            ]
+        },
     },
     {
         dropdownmenu:{
@@ -88,6 +238,31 @@ let State = [
                 object: "/nastroenie/companies",
                 objectZakazchik: "/nastroenie/zakazchik",
             },
+        },
+        companies: {
+            mainCompanies: [
+                {
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                },
+                {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                },
+                {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }
+            ]
         },
     },
 ];
