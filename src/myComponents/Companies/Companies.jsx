@@ -8,7 +8,7 @@ class Companies extends React.Component {
     }
 
     render(){
-        let mass = this.props.companiesData.map(item =>
+        let companiesArray = this.props.companiesData.map(item =>
             <MainCompany
                 companyType={item.companyType}
                 companyName={item.companyName}
@@ -20,8 +20,10 @@ class Companies extends React.Component {
         return(
             <>
                 <CompaniesHeader/>
+                <div className={styles.companiesBody}>
+                    {companiesArray}
+                </div>
                 {/* <MainCompany/> */}
-                {mass}
             </>
         )
     }

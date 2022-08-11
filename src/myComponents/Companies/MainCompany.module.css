@@ -1,27 +1,42 @@
-.container{
+.companyContainer{
     display: grid;
     grid-template-areas:
     "logo info"
     "tasks tasks"
     ;
-
     width: 100%;
+    border-bottom: 1.5px solid #bebebeda;
     font-family: roboto;
 }
 
 .logo{
     grid-area: logo;
-    /* width: 20%; */
+    display: flex;
+    margin: auto;
 }
+
 .logo img{
     display: block;
     width: 75px;
-    /* height: 100px; */
 }
 
-.companyType, .companyName, .companyContacts{
+.companyInfo{
     grid-area: info;
 }
+
+.companyTasks{
+    grid-area: tasks;
+}
+.companyType, .companyName, .companyContacts{
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.companyName{
+    text-transform: uppercase;
+}
+
 /*
 .companyName{
     grid-area: info;
