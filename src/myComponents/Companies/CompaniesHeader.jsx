@@ -19,8 +19,8 @@ class CompaniesHeader extends React.Component {
                 <Link className={styles.companiesTypes} to="contractor">Подрядчики</Link>
                 <Routes>
                     <Route path="customer" element={<Customer/>}/>
-                    <Route path="customer" element={<Designer/>}/>
-                    <Route path="customer" element={<Contractor/>}/>
+                    <Route path="designer" element={<Designer/>}/>
+                    <Route path="contractor" element={<Contractor/>}/>
                 </Routes>
             </div>
         )

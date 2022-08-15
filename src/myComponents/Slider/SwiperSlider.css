@@ -10,6 +10,7 @@
 .swiper{
   margin-top: -75px;
   height: 100vh;
+  z-index: 10;
 }
 
 .swiper-slide img{

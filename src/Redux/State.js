@@ -18,7 +18,8 @@ let State = [
                     companyName: "ФСК Девелопмент",
                     contacts: "8 (495) 660-15-55",
                     imgSrc: "",
-                    tasks: ""
+                    tasks: "",
+                    link: "tech-zakazchik",
                 },
                 {
                     companyType: "Генеральный подрядчик",
@@ -26,13 +27,15 @@ let State = [
                     contacts: "8-(495)-286-76-80",
                     imgSrc: "",
                     tasks: "",
+                    link: "gen-podriadchik",
                 },
                 {
                     companyType: "Суб. подрядчик",
                     companyName: "ООО ФСК Отделочные Технологии",
                     contacts: "8-(929)-510-09-69",
                     imgSrc: "",
-                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"],
+                    link: "sub-podriadchik",
                 }
             ]
         },

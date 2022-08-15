@@ -25,6 +25,7 @@ function App(props) {
             {/* <WorkersCounterTable/> */}
             {/* <SwiperSlider/> */}
             {/* <Gallery/> */}
+            {/* <Companies/> */}
           </div>
         <Footer data={props.data}/>
       </div>

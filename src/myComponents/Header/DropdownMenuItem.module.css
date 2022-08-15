@@ -2,15 +2,15 @@
 /* relative pos hide footer shadow */
 .dropdownMenuWrapper{
     position: relative;
+    z-index: 5;
     padding-bottom: 2px;
-    background: linear-gradient(to left, #860909e9, #9b0c0ce8);
+    background: linear-gradient(to left, #860909, #9b0c0c);
 }
 
 /* Common styles for every menu */
 .dropdownMenuItem{
     padding: 7px 0 7px 10px;
     background: linear-gradient(to left, #cc3333, #f15c22);
-    /* text-decoration: none; */
 }
 
 .active__Object{

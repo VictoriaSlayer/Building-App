@@ -11,7 +11,6 @@ class MainCompany extends React.Component {
         if(this.props.tasks.length != 0){
             this.props.tasks.map(item => tasks.push(<p>{item}</p>));
         }
-        console.log(this.props.tasks.length);
         return(
             <div className={styles.companyContainer}>
                 <div className={styles.logo}>
