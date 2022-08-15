@@ -1,14 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import { useParams, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, {Navigation, Pagination, History} from 'swiper';
+import {Navigation, Pagination, History} from 'swiper';
 import '../../../node_modules/swiper/swiper-bundle.css';
 import './SwiperSlider.css';
 
 import {Link, Routes, Route} from "react-router-dom";
-
-SwiperCore.use([Navigation, Pagination]);
 
 function SwiperSlider(){
   let {id} = useParams();
@@ -19,9 +17,8 @@ function SwiperSlider(){
 //
   for(let i = 0; i < 10; i++) {
    slides.push(
-    <SwiperSlide key={`masonry-img${i}`} tag="li" containerClass="swiper-zoom-container" zoom="true" toggle="true" data-history={`${i}`}><img src={`/Photos/${i}.jpg`} alt={`фото ${i}`}/>
-
-          <button className="closeButton" onClick = {closeButton}>{'\u00d7'}</button>
+    <SwiperSlide key={`masonry-img${i}`} tag="li" containerClass="swiper-zoom-container" zoom="true" toggle="true" data-history={`${i}`}>
+      <img src={`/Photos/${i}.jpg`} alt={`фото ${i}`}/>
     </SwiperSlide>
     );
   }
@@ -40,10 +37,13 @@ function SwiperSlider(){
       preventInteractionOnTransition = {true}
       modules={[Navigation, Pagination, History]}
       history={{
-        key: "slide",
+        key: "",
       }}
       >
-      {slides}
+        {slides}
+        <Link to={`/gallery`}>
+        <button className="closeButton" onClick = {closeButton}>{'\u00d7'}</button>
+        </Link >
       </Swiper>
 
     </>

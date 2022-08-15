@@ -27,6 +27,7 @@
 
 .closeButton{
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   width: 10vh;
@@ -36,4 +37,5 @@
   font-size: 5vh;
   font-weight: bold;
   color: #ff8f32;
+
 }
