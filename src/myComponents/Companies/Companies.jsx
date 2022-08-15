@@ -16,14 +16,14 @@ class Companies extends React.Component {
 
     render(){
         let linksArray = this.props.companiesData.map(item =>
-            <Link to={item.link} className={styles.link}>
+            // <Link to={item.link} className={styles.link}>
                 <MainCompany
                     companyType={item.companyType}
                     companyName={item.companyName}
                     contacts={item.contacts}
                     tasks={item.tasks}
                     />
-            </Link>
+            // </Link>
         );
 
         let routesArray = this.props.companiesData.map(item => <Route path={item.link} element={<Test/>}></Route>);
