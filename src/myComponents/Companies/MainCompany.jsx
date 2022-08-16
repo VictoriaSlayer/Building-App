@@ -5,38 +5,22 @@ class MainCompany extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            boolean: false,
-            display: "none",
+            display: false,
         }
     }
 
-
-
     dropdownClick = () => {
-        if(this.state.display === "none"){
-            this.setState(state => ({
-                display: "block",
-            }))
-        }
-        if(this.state.display === "block"){
-            this.setState(state => ({
-                display: "none",
-            }))
-        }
+        this.setState(state => ({
+            display: !this.state.display
+        }))
     }
 
     render(){
-        let hiddenStyles = {
-            // display: "none",
-            display: this.state.display
-        }
 
         let tasks = [];
         if(this.props.tasks.length != 0){
             this.props.tasks.map(item => tasks.push(<p>{item}</p>));
         }
-
-
 
         return(
             <div className={styles.companyContainer}>
@@ -54,7 +38,7 @@ class MainCompany extends React.Component {
                 </div>
                 {/* тут */}
                 <div onClick = {this.dropdownClick}>Финансы
-                    <div style={hiddenStyles} className={`${styles.contracts} ${styles.active}`}>Контракты:</div>
+                    <div className={`${styles.contracts} ${this.state.display ? styles.active: styles.hidden}`}>Контракты:</div>
                 </div>
             </div>
         )
