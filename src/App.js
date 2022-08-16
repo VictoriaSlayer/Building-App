@@ -13,10 +13,10 @@ import Gallery from './myComponents/Gallery/Gallery';
 function App(props) {
   return (
       <div className={styles.body__container}>
-        <Header data={props.data}/>
+        <Header data={props.data.contractors.complexes}/>
           <div className={styles.main__container}>
             <Routes>
-              {props.data.map(item =>
+              {props.data.contractors.complexes.map(item =>
                 <Route path={item.dropdownmenu.links.dropdown} element={<Companies links={item.dropdownmenu.links} companiesData={item.companies.mainCompanies}/>}/>
               )}
               <Route path={`gallery/:id`} element={<SwiperSlider />}></Route>
@@ -27,7 +27,7 @@ function App(props) {
             <Gallery/>
             {/* <Companies/> */}
           </div>
-        <Footer data={props.data}/>
+        <Footer data={props.data.contractors.complexes}/>
       </div>
   );
 }
