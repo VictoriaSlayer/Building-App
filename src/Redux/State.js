@@ -77,6 +77,9 @@ let State = {
                             contacts: "8-(929)-510-09-69",
                             imgSrc: "",
                             tasks: "",
+                            allSum: 5504706658,
+                            givenSum: 2752353329,
+                            closedSum: 970270270
                         }
                     ]
                 },
