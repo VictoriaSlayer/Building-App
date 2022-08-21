@@ -16,7 +16,8 @@ class MainCompany extends React.Component {
     }
 
     render(){
-
+        let givenSumWidth = `${this.props.givenSum/this.props.allSum*100}%`;
+        console.log(typeof(givenSumWidth));
         let tasks = [];
         if(this.props.tasks.length != 0){
             this.props.tasks.map(item => tasks.push(<p>{item}</p>));
@@ -37,8 +38,22 @@ class MainCompany extends React.Component {
                     {tasks}
                 </div>
                 {/* тут */}
-                <div onClick = {this.dropdownClick}>Финансы
-                    <div className={`${styles.contracts} ${this.state.display ? styles.active: styles.hidden}`}>Контракты:</div>
+                <div className={styles.money} onClick = {this.dropdownClick}>Финансы <span className={styles.bracket}>{`>`}</span>
+                    <div className={`${styles.moneyContracts} ${this.state.display ? styles.active: styles.hidden}`}>
+
+                        <div className={styles.moneyHeader}>Контракт:</div>
+                        <div className={`${styles.allMoney} ${styles.sum}`}>
+                            <span>Всего {this.props.allSum}р.</span>
+                            <span>100%</span>
+                        </div>
+                        <div className={`${styles.giveny} ${styles.sum}`}>
+                            <span>Всего {this.props.givenSum}р.</span>
+                            <span>{this.props.givenSum/this.props.allSum*100}%</span>
+                            <div style={{position: 'absolute', width: `${givenSumWidth}`, height:'100%', top:"0px", left:"0px", content:"qwertyyy", backgroundColor:"#3b82f6", zIndex:"-1"}} >
+                            </div>
+                        </div>
+                        <div className={styles.moneyFeedback}></div>
+                    </div>
                 </div>
             </div>
         )

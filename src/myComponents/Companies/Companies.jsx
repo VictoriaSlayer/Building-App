@@ -22,6 +22,9 @@ class Companies extends React.Component {
                     companyName={item.companyName}
                     contacts={item.contacts}
                     tasks={item.tasks}
+                    allSum={item.allSum}
+                    givenSum={item.givenSum}
+                    closedSum={item.closedSum}
                     />
             // </Link>
         );
