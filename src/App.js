@@ -24,7 +24,7 @@ function App(props) {
             {/* <MyCalendar/> */}
             {/* <WorkersCounterTable/> */}
             {/* <SwiperSlider/> */}
-            <Gallery/>
+            {/* <Gallery/> */}
             {/* <Companies/> */}
           </div>
         <Footer data={props.data.contractors.complexes}/>
