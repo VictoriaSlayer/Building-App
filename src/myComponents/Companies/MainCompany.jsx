@@ -15,9 +15,32 @@ class MainCompany extends React.Component {
         }))
     }
 
+    splittedSum(arg){
+        if(arg !== undefined){
+
+            let string = ""+arg;
+            string = [...string].reverse();
+
+            let answer = [];
+            string.map((item, index, array) => {
+                if ((index % 3 === 0) && (index !== array.length) && (index !== 0)){
+                    answer.push(" ");
+                    answer.push(item);
+                }
+                else{
+                    answer.push(item);
+                }
+            });
+            answer = answer.reverse().join("");
+
+            return(answer);
+        }
+    }
+
     render(){
+        let allSum = this.splittedSum(this.props.allSum);
+        let givenSum = this.splittedSum(this.props.givenSum);
         let givenSumWidth = `${this.props.givenSum/this.props.allSum*100}%`;
-        console.log(typeof(givenSumWidth));
         let tasks = [];
         if(this.props.tasks.length != 0){
             this.props.tasks.map(item => tasks.push(<p>{item}</p>));
@@ -43,16 +66,16 @@ class MainCompany extends React.Component {
 
                         <div className={styles.moneyHeader}>Контракт:</div>
                         <div className={`${styles.allMoney} ${styles.sum}`}>
-                            <span>Всего {this.props.allSum}р.</span>
+                            <span>Всего {allSum}р.</span>
                             <span>100%</span>
                         </div>
-                        <div className={`${styles.giveny} ${styles.sum}`}>
-                            <span>Всего {this.props.givenSum}р.</span>
+                        <div className={`${styles.givenMoney} ${styles.sum}`}>
+                            <span>Всего {givenSum}р.</span>
                             <span>{this.props.givenSum/this.props.allSum*100}%</span>
                             <div style={{position: 'absolute', width: `${givenSumWidth}`, height:'100%', top:"0px", left:"0px", content:"qwertyyy", backgroundColor:"#3b82f6", zIndex:"-1"}} >
                             </div>
                         </div>
-                        <div className={styles.moneyFeedback}></div>
+                        <div className={styles.moneyFeedback}>До окончания строительства необходимо выдать {givenSumWidth} или {allSum - givenSum} и осмечивать по {`${this.props.givenSum/this.props.allSum*100/12}%`}</div>
                     </div>
                 </div>
             </div>

@@ -37,7 +37,6 @@ class Companies extends React.Component {
                 <div className={styles.companiesBody}>
                     {linksArray}
                 </div>
-                <Test/>
                 <Routes>
                     {routesArray}
                 </Routes>
