@@ -22,9 +22,9 @@ function App(props) {
               <Route path={`gallery/:id`} element={<SwiperSlider />}></Route>
             </Routes>
             {/* <MyCalendar/> */}
-            <WorkersCounterTable/>
+            {/* <WorkersCounterTable/> */}
             {/* <SwiperSlider/> */}
-            {/* <Gallery/> */}
+            <Gallery/>
             {/* <Companies/> */}
           </div>
         <Footer data={props.data.contractors.complexes}/>

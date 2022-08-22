@@ -23,6 +23,9 @@ let State = {
                             imgSrc: "",
                             tasks: "",
                             link: "tech-zakazchik",
+                            allSum: 105504706658,
+                            givenSum: 32752353329,
+                            closedSum: 2970270270
                         },
                         {
                             companyType: "Генеральный подрядчик",
@@ -31,6 +34,9 @@ let State = {
                             imgSrc: "",
                             tasks: "",
                             link: "gen-podriadchik",
+                            allSum: 105504706658,
+                            givenSum: 32752353329,
+                            closedSum: 2970270270
                         },
                         {
                             companyType: "Суб. подрядчик",

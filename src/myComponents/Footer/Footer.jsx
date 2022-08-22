@@ -11,7 +11,7 @@ import {ReactComponent as Message} from './../../Images/Icons/message.svg';
 import {ReactComponent as Calc} from './../../Images/Icons/calc.svg';
 import {ReactComponent as Graph} from './../../Images/Icons/graph.svg';
 
-const iconsArray = [[Organization, "Подрядчики"], [Worker, "Рабочие"], [Photo, "Фото-ОСК"], [Message, "Замечания"], [Calc, "Кальк-р"], [Graph, "ПТО"]];
+const iconsArray = [[Organization, "Подрядчики"], [Worker, "Рабочие"], [Photo, "Фото-ОСК"], [Message, "Прорабы"], [Calc, "Кальк-р"], [Graph, "ПТО"]];
 
 
 function Footer(props) {
