@@ -7,6 +7,7 @@ import {Routes, Route, Navigate} from "react-router-dom";
 
 import WorkersCounterTable from './myComponents/WorkersCounter/WorkersCounterTable';
 import Gallery from './myComponents/Gallery/Gallery';
+import SwiperSlider from "./myComponents/Slider/SwiperSlider";
 
 function App(props) {
     const {pages, topMenu} = props.data;
@@ -19,6 +20,7 @@ function App(props) {
                     <Route path={`/contractors/:complex`} element={<Companies data={pages[0].complexes}/>}/>
                     <Route path={`/workers/:complex`} element={<WorkersCounterTable data={pages[0].complexes}/>}/>
                     <Route path={`/photos/:complex`} element={<Gallery data={pages[0].complexes}/>}/>
+                    <Route path={`gallery/:id`} element={<SwiperSlider />}></Route>
                 </Routes>
             </div>
             <Footer data={null}/>
