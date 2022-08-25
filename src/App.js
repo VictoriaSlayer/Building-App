@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './myComponents/Header/Header';
-import Footer from './myComponents/Footer/Footer';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 import styles from './App.module.css';
-import Companies from './myComponents/Companies/Companies';
+import Companies from './Components/Companies/Companies';
 import {Routes, Route, Navigate} from "react-router-dom";
 
-import WorkersCounterTable from './myComponents/WorkersCounter/WorkersCounterTable';
-import Gallery from './myComponents/Gallery/Gallery';
-import SwiperSlider from "./myComponents/Slider/SwiperSlider";
+import WorkersCounterTable from './Components/WorkersCounter/WorkersCounterTable';
+import Gallery from './Components/Gallery/Gallery';
+import SwiperSlider from "./Components/Slider/SwiperSlider";
 
 function App(props) {
     const {pages, topMenu} = props.data;
