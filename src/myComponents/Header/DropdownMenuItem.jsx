@@ -1,14 +1,8 @@
 import React from 'react';
 import style from './DropdownMenuItem.module.css';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import Companies from './../Companies/Companies';
-import Footer from './../Footer/Footer';
+import {Link} from "react-router-dom";
+
 class DropdownMenuItem extends React.Component {
-
-    constructor(props){
-        super(props);
-    }
-
     clicked = () => {
         this.props.clicked(this.props.id);
     }

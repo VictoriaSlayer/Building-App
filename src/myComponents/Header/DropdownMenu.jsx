@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './DropdownMenu.module.css';
 import DropdownMenuItem from './DropdownMenuItem.jsx';
+
 class DropdownMenu extends React.Component {
     constructor(props) {
         super(props);
@@ -10,8 +11,8 @@ class DropdownMenu extends React.Component {
         };
     }
 
-    clickedItem = (id) =>{
-        if(this.state.opened === true){
+    clickedItem = (id) => {
+        if (this.state.opened === true) {
             this.setState(state => ({
                 chosenId: id,
             }));
@@ -21,34 +22,36 @@ class DropdownMenu extends React.Component {
         }));
     }
 
-    render(){
-             // преобразовываем данные с пропсов в массив и маппим их после
-            const dataObject = this.props.data;
-            const dropdownObjects = [];
+    render() {
+        // преобразовываем данные с пропсов в массив и маппим их после
+        const items = this.props.data;
+        const dropdownObjects = [];
 
-            if(this.state.opened === false){
-                dropdownObjects.push(dataObject[this.state.chosenId]);
+        dropdownObjects.push(items[this.state.chosenId]);
+        if (this.state.opened) {
+            for (let i in items) {
+                dropdownObjects.push(items[i]);
             }
-            else{
-                dropdownObjects.push(dataObject[this.state.chosenId]);
-                for(let i in dataObject){
-                    dropdownObjects.push(dataObject[i]);
-                }
-            }
-
-            let dropdownComponents = dropdownObjects.map((item, index) => {
-                return (
-                    <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={item} clicked={this.clickedItem} id = {item.id} link = {item.link} quotes={index === 0 ? ">" : "" } />
-                    );
-                });
-
-            return (
-                <div className = {style.DropdownMenu}>
-                    {dropdownComponents}
-                </div>
-            )
         }
+
+        return (
+            <div className={style.DropdownMenu}>
+                {dropdownObjects.map((item, index) => (
+                    <DropdownMenuItem
+                        name={item.name}
+                        address={item.address}
+                        objectDelivery={item.objectDelivery}
+                        key={item}
+                        clicked={this.clickedItem}
+                        id={item.id}
+                        link={item.link}
+                        quotes={index === 0 ? ">" : ""}
+                    />
+                ))}
+            </div>
+        )
     }
+}
 
 
 export default DropdownMenu;
