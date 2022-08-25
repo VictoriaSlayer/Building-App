@@ -1,5 +1,5 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, {useEffect} from 'react';
+import {Link, useLocation} from "react-router-dom";
 
 import style from "./Footer.module.css";
 
@@ -18,6 +18,9 @@ function getTopMenuItem(){
 }
 
 function Footer(props) {
+    const location = useLocation();
+    useEffect(() => {}, [location]);
+
     return(
             <nav className={`${style.footer__nav}`}>
                 {iconsArray.map(item => {
