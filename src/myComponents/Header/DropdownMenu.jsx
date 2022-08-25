@@ -27,18 +27,18 @@ class DropdownMenu extends React.Component {
             const dropdownObjects = [];
 
             if(this.state.opened === false){
-                dropdownObjects.push(dataObject[this.state.chosenId].dropdownmenu);
+                dropdownObjects.push(dataObject[this.state.chosenId]);
             }
             else{
-                dropdownObjects.push(dataObject[this.state.chosenId].dropdownmenu);
+                dropdownObjects.push(dataObject[this.state.chosenId]);
                 for(let i in dataObject){
-                    dropdownObjects.push(dataObject[i].dropdownmenu);
+                    dropdownObjects.push(dataObject[i]);
                 }
             }
 
             let dropdownComponents = dropdownObjects.map((item, index) => {
                 return (
-                    <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={item} clicked={this.clickedItem} id = {item.id} links = {item.links} quotes={index === 0 ? ">" : "" } />
+                    <DropdownMenuItem name={item.name} address={item.address} objectDelivery={item.objectDelivery} key={item} clicked={this.clickedItem} id = {item.id} link = {item.link} quotes={index === 0 ? ">" : "" } />
                     );
                 });
 

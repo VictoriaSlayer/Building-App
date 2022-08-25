@@ -63,7 +63,7 @@ class MainCompany extends React.Component {
             <div className={styles.companyContainer}>
                 <div className={styles.logo}>
                     {/* Изображения заглушки, по дефолту все ФСК, и одна МСУ для разнообразия */}
-                    {this.props.companyName === "АО МСУ-1" ? <img src="./Companies Logo/MSU.png"/> : <img src="./Companies Logo/FSK1.png"/>}
+                    {this.props.companyName === "АО МСУ-1" ? <img src="/Companies Logo/MSU.png"/> : <img src="/Companies Logo/FSK1.png"/>}
                 </div>
                 <div className={styles.companyInfo}>
                     <p className={styles.companyType}>{this.props.companyType}</p>
