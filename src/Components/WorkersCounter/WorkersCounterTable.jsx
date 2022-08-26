@@ -3,7 +3,6 @@ import WorkersComments from './WorkersComments';
 import './WorkersCounterTable.css';
 
 function WorkersCounterTable(){
-
   return (
     <div className="workersTableContainer">
       <table className="workersTable">
