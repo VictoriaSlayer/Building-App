@@ -23,6 +23,7 @@ function Companies(props) {
                         allSum={item.allSum}
                         givenSum={item.givenSum}
                         closedSum={item.closedSum}
+                        management={item.management}
                     />
                     // </Link>
                 )}

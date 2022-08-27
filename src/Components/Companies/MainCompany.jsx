@@ -1,17 +1,25 @@
 import React from 'react';
 import styles from './MainCompany.module.css';
 
+// ВСЕ НАХРЕН ОТРЕФАКТОРИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 class MainCompany extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             display: false,
+            management: false,
         }
     }
 
     dropdownClick = () => {
         this.setState(state => ({
             display: !this.state.display
+        }))
+    }
+
+    managementClick = () => {
+        this.setState(state => ({
+            management: !this.state.management
         }))
     }
 
@@ -36,6 +44,23 @@ class MainCompany extends React.Component {
         return result.reverse().join("");
     }
 
+    formateManagement(array){
+        let buffer = [];
+        if(array !== undefined) {
+            for(let i = 0; i < array.length; i++){
+                let managementArray = [];
+                let managementBlock = <div className = {styles.managementBlock}>{managementArray}</div>;
+                for(let l = 0; l < array[i].length; l++){
+                managementArray.push(<div className = {styles.managementStroke}>{array[i][l]}</div>);
+            }
+            buffer.push(managementBlock);
+        }
+
+        let answer = <div>{buffer}</div>
+        return answer;
+        }
+    }
+
     render() {
         let allSum = this.formatNumber(this.props.allSum);
         let givenSum = this.formatNumber(this.props.givenSum);
@@ -51,9 +76,11 @@ class MainCompany extends React.Component {
         let givenSum2 = this.formatNumber(this.props.givenSum - this.props.closedSum);
         let givenSumWidth2 = this.props.closedSum / this.props.givenSum * 100;
 
+        let management = this.formateManagement(this.props.management);
         return (
+
             <div className={styles.companyContainer}>
-                <div className={styles.logo}>
+                <div className={styles.logo} >
                     {/* Изображения заглушки, по дефолту все ФСК, и одна МСУ для разнообразия */}
                     {this.props.companyName === "АО МСУ-1" ? <img src="/Companies Logo/MSU.png"/> :
                         <img src="/Companies Logo/FSK1.png"/>}
@@ -67,8 +94,11 @@ class MainCompany extends React.Component {
                     {this.props.tasks && this.props.tasks.map(item => <p>{item}</p>)}
                 </div>
                 {/* тут */}
-                <div className={styles.money} onClick={this.dropdownClick}>Финансы <span
+                <div className={styles.money}>
+                    <div className={styles.moneyHeader} onClick={this.dropdownClick}>
+                    Финансы <span
                     className={styles.bracket}>{`>`}</span>
+                    </div>
                     <div className={`${styles.moneyContracts} ${this.state.display ? styles.active : styles.hidden}`}>
 
                         <div className={styles.moneyHeader}>Контракт:</div>
@@ -122,9 +152,16 @@ class MainCompany extends React.Component {
                             выдать {`${100 - givenSumWidth2.toFixed(2)}%`} или {`${givenSum2}р.`} и осмечивать
                             по {`${((100 - givenSumWidth2) / 12).toFixed(2)}%.`} или {`148 506 921р.`}</div>
                     </div>
-                    <div>Руководство <span className={styles.bracket}>{`>`}</span></div>
-                </div>
 
+                </div>
+                <div className={styles.management}>
+                    <div className={styles.managementHeader} onClick={this.managementClick}>
+                        Руководство<span className={styles.bracket}>{`>`}</span>
+                    </div>
+                    <div className={`${styles.managementBody} ${this.state.management ? styles.active : styles.hidden}`}>
+                        {management}
+                    </div>
+                </div>
             </div>
         )
     }

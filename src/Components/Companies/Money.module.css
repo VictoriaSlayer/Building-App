@@ -52,15 +52,19 @@
 }
 
 .hidden{
-    display: none;
+
+    display: block;
+    height: 0;
+    opacity: 0;
 }
 
 .active{
+    /*  */
     grid-area: tasks;
     display: block;
+    opacity: 1;
     transition: all 1s;
 }
-
 
 /* ------- */
 .money, .management{
@@ -99,14 +103,19 @@
     padding-top: 5px;
 }
 
-.management, .managementHeader{
 
+
+.hidden2{
+
+    display: block;
+    height: 0;
+    opacity: 0;
 }
 
-.managementBlock{
-    padding: 5px 0;
-}
-
-.managementStroke{
-    padding: 5px 0;
+.active2{
+    /*  */
+    grid-area: tasks;
+    display: block;
+    opacity: 1;
+    transition: all 1s;
 }
