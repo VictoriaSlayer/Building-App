@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, useLocation} from "react-router-dom";
 
 import style from "./Footer.module.css";
@@ -17,11 +17,14 @@ function Footer(props) {
     const location = useLocation();
     useEffect(() => {}, [location]);
 
+    let [chosenId, setChosenId] = useState(0);
+
     return (
         <nav className={`${style.footer__nav}`}>
-            {icons.map(item => {
+            {icons.map((item, index) => {
                 const Svg = item[0];
-                return <Link to={`${item[2]}/${getTopMenuItem()}`}> <Svg/><span>{item[1]}</span> </Link>
+                return <Link to={`${item[2]}/${getTopMenuItem()}`}
+                onClick={() => setChosenId(index)}><Svg className={chosenId === index ? style.chosen : ""}/><span className={chosenId === index ? style.chosen : ""}>{item[1]}</span></Link>
             })}
         </nav>
     )

@@ -29,7 +29,7 @@
     font-size: calc(11px + .1em);
     text-align: center;
     text-decoration: none;
-    color: #696969;
+    color: #131313;
     white-space: nowrap;
 }
 
@@ -37,5 +37,10 @@
 .footer__nav * :first-child{
     min-width: 35px;
     width: 50%;
-    fill: #696969;
+    /* fill: #696969; */
+}
+
+.footer__nav * .chosen{
+    color: #e24a1d;
+    fill: #e24a1d;
 }
