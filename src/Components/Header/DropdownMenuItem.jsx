@@ -9,7 +9,7 @@ class DropdownMenuItem extends React.Component {
 
     render() {
         return (
-            <Link to={`${window.location.pathname}/../${this.props.link}`}>
+            <Link to={`${window.location.pathname.replace(/\/+$/, '')}/../${this.props.link}`}>
                 <div className={`${style.dropdownMenuWrapper}`}>
                     <div className={`${style.dropdownMenuItem}`} onClick={this.clicked}>
                         <div className={`${style.active__Object} ${style.active__ObjectName}`} >

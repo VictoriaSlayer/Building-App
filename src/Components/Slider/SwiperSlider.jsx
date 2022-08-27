@@ -33,7 +33,7 @@ function SwiperSlider() {
                         <img src={`/Photos/${i}.jpg`} alt={`фото ${i}`}/>
                     </SwiperSlide>
                 )}
-                <Link to={`/gallery`}>
+                <Link to={`${window.location.pathname.replace(/\/+$/, '')}/..`}>
                     <button className="closeButton">{'\u00d7'}</button>
                 </Link>
             </Swiper>

@@ -9,7 +9,7 @@ class Gallery extends React.Component {
             <div className={styles.galleryContainer}>
                 <div className={styles.gallery}>
                     {[...Array(10).keys()].map(number =>
-                        <Link to={`/gallery/${number}`}>
+                        <Link to={`${number}`}>
                             <img className={styles.image} src={`/Photos/${number}.jpg`} alt={`фото ${number}`}/>
                         </Link>
                     )}

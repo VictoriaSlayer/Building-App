@@ -19,8 +19,8 @@ function App(props) {
                     <Route path='/' element={<Navigate to="/contractors/arhitector" replace/>}/>
                     <Route path={`/contractors/:complex`} element={<Companies data={pages[0].complexes}/>}/>
                     <Route path={`/workers/:complex`} element={<WorkersCounterTable data={pages[0].complexes}/>}/>
-                    <Route path={`/photos/:complex`} element={<Gallery data={pages[0].complexes}/>}/>
-                    <Route path={`gallery/:id`} element={<SwiperSlider />}></Route>
+                    <Route path={`/gallery/:complex`} element={<Gallery data={pages[0].complexes}/>}/>
+                    <Route path={`gallery/:complex/:id`} element={<SwiperSlider />}></Route>
                 </Routes>
             </div>
             <Footer data={null}/>
