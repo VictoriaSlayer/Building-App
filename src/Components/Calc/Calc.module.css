@@ -1,0 +1,28 @@
+.calcBody{
+    padding: 10px;
+    font-family: Roboto;
+}
+
+.choose__object{
+    display: flex;
+}
+
+.perimeter, .blockNumber{
+    padding: 5px;
+}
+
+.subtracted__select{
+
+}
+
+.subtracted__selectQuantity{
+
+}
+
+.add__Substructed{
+
+}
+
+.substructed__container{
+
+}

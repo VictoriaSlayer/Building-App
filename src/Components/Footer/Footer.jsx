@@ -11,7 +11,7 @@ import {ReactComponent as Message} from './../../Images/Icons/message.svg';
 import {ReactComponent as Calc} from './../../Images/Icons/calc.svg';
 import {ReactComponent as Graph} from './../../Images/Icons/graph.svg';
 
-const icons = [[Organization, "Подрядчики", 'contractors'], [Worker, "Рабочие", 'workers'], [Photo, "Фото-ОСК", 'gallery'], [Message, "Прорабы"], [Calc, "Кальк-р"], [Graph, "ПТО"]];
+const icons = [[Organization, "Подрядчики", 'contractors'], [Worker, "Рабочие", 'workers'], [Photo, "Фото-ОСК", 'gallery'], [Message, "Прорабы", , 'master'], [Calc, "Кальк-р", 'calc'], [Graph, "ПТО", "pto"]];
 
 function Footer(props) {
     const location = useLocation();

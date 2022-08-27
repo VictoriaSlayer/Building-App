@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer';
 import styles from './App.module.css';
 import Companies from './Components/Companies/Companies';
 import MyCalendar from './Components/Calendar/MyCalendar';
+import Calc from './Components/Calc/Calc';
 import {Routes, Route, Navigate} from "react-router-dom";
 
 import WorkersCounterTable from './Components/WorkersCounter/WorkersCounterTable';
@@ -15,7 +16,6 @@ function App(props) {
     return (
         <div className={styles.body__container}>
             <Header data={topMenu}/>
-            {/* <MyCalendar/> */}
             <div className={styles.main__container}>
                 <Routes>
                     <Route path='/' element={<Navigate to="/contractors/arhitector" replace/>}/>
@@ -23,6 +23,7 @@ function App(props) {
                     <Route path={`/workers/:complex`} element={<WorkersCounterTable data={pages[0].complexes}/>}/>
                     <Route path={`/gallery/:complex`} element={<Gallery data={pages[0].complexes}/>}/>
                     <Route path={`gallery/:complex/:id`} element={<SwiperSlider />}></Route>
+                    <Route path={`calc/:complex/`} element={<Calc />}></Route>
                 </Routes>
             </div>
             <Footer data={null}/>
