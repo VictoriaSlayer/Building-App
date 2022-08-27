@@ -1,3 +1,15 @@
+.date{
+    padding: 20px 0px 0px 10px;
+    font-size: 18px;
+}
+
+.arrowButton{
+    line-height: 22px;
+    padding: 0 10px;
+    color:rgb(66, 66, 66);
+}
+
+
 .workersTableContainer{
     overflow: scroll;
     max-height: calc(100vh - 75px - 80px - 15px);

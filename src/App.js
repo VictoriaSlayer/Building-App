@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import styles from './App.module.css';
 import Companies from './Components/Companies/Companies';
+import MyCalendar from './Components/Calendar/MyCalendar';
 import {Routes, Route, Navigate} from "react-router-dom";
 
 import WorkersCounterTable from './Components/WorkersCounter/WorkersCounterTable';
@@ -14,6 +15,7 @@ function App(props) {
     return (
         <div className={styles.body__container}>
             <Header data={topMenu}/>
+            {/* <MyCalendar/> */}
             <div className={styles.main__container}>
                 <Routes>
                     <Route path='/' element={<Navigate to="/contractors/arhitector" replace/>}/>
