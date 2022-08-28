@@ -1,18 +1,91 @@
-.calcBody{
+*{
+    box-sizing: border-box;
+}
+
+.calc__body{
     padding: 10px;
     font-family: Roboto;
 }
 
-.choose__object{
+.calc__header{
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+@media (max-width: 900px){
+    .leftBlock{
+        width: 55%;
+        margin-right: 20px;
+    }
+    .rightBlock{
+        width:40%;
+        /* padding: 10px; */
+        border: 2px solid #f0570e;
+        border-radius: 5px;
+    }
+    .rightBlock *{
+        padding: 10px;
+    }
+}
+
+
+.calc__chooseBlock, .input__container, .substructed__container{
     display: flex;
 }
 
-.perimeter, .blockNumber{
-    padding: 5px;
+.address{
+    width: 100%;
+}
+
+.calc__chooseBlock{
+    padding: 10px 0;
+}
+
+.input__container, .choose__finishing{
+    margin-bottom: 15px;
+}
+
+.calc__chooseBlock .text, .perimeterHeader, .floors{
+    padding: 10px;
+    line-height: 23px;
+    background-color: #f9d7c2;
+    border-radius: 5px;
+    /* margin-right: 10px; */
+}
+
+.calc__chooseBlock .address{
+
+}
+
+.calc__finishingHeader, .subtracted__header{
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.finishing__type__select{
+    padding: 10px;
+    border: 2px solid #f0570e;
+    border-radius: 5px;
+}
+
+.perimeter, .blockNumber, .subtracted__selectQuantity{
+    width: 100%;
+    height: 100%;
+    border: transparent;
+    padding: 10px;
+}
+
+.substructed__container{
+    margin-bottom: 15px;
 }
 
 .subtracted__select{
-
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f0570e;
+    border-radius: 5px;
 }
 
 .subtracted__selectQuantity{
@@ -20,7 +93,11 @@
 }
 
 .add__Substructed{
-
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #f0570e;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
 .substructed__container{

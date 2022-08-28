@@ -38,13 +38,13 @@ class Calc extends React.Component {
 
     render(){
         return (
-           <div className={styles.calcBody}>
+           <div className={styles.calc__body}>
 
-                <h1>Калькулятор расчета площади</h1>
-                <div className={styles.choose__object}>
-                    <div className={styles.text}>Выберите корпус</div>
-                    <div className={styles.choose__address}>
-                        <select name="" id="address" className={styles.address}>
+                <h1 className={styles.calc__header}>Калькулятор расчета площади</h1>
+                <div className={styles.calc__chooseBlock}>
+                    <div className={`${styles.text} ${styles.leftBlock}`}>Выберите корпус</div>
+                    <div className={`${styles.choose__address} ${styles.rightBlock}` }>
+                        <select name="" id="address" className={`${styles.address}`}>
                             <option value="Corp1">Корпус 1</option>
                             <option value="Corp2">Корпус 2</option>
                             <option value="Corp3">Корпус 3</option>
@@ -52,34 +52,38 @@ class Calc extends React.Component {
                     </div>
                 </div>
 
-                <div className={styles.finishing__type}>
-                    <h2>Тип отделки</h2>
+                <div className={styles.calc__finishingType}>
+                    <h2 className={`${styles.calc__finishingHeader} ${styles.leftBlock}`}>Тип отделки</h2>
                     <div className={styles.choose__finishing}>
-                        <select className={`${styles.finishing__type__select} block`}>
+                        <select className={`${styles.finishing__type__select} ${styles.leftBlock}`}>
                             <option value="plastering">Оштукатуривание</option>
                             <option value="facing">Облицовка</option>
                             <option value="warming">Утепление</option>
                         </select>
                     </div>
-                    <div className={styles.perimeterHeader}>Периметр</div>
-                    <div className={styles.input__meters}>
-                        <input className={styles.perimeter} type="number" onChange={this.calcArea}/>
-                    </div>
-                    <div className={styles.number__of__floors}>
-                        <div className={styles.floors }>Этажи</div>
-                        <div className={styles.input__floors}>
-                            <input className={styles.blockNumber} type="number" onChange={this.calcArea}/>
+                    <div className={styles.input__container}>
+                        <div className={`${styles.perimeterHeader} ${styles.leftBlock}`}>Периметр</div>
+                        <div className={`${styles.input__meters} ${styles.rightBlock}`}>
+                            <input className={styles.perimeter} type="number" onChange={this.calcArea}/>
                         </div>
                     </div>
+                    <div className={styles.input__container}>
+
+                            <div className={`${styles.floors} ${styles.leftBlock}`}>Этажи</div>
+                            <div className={`${styles.input__floors} ${styles.rightBlock}`}>
+                                <input className={styles.blockNumber} type="number" onChange={this.calcArea}/>
+                    </div>
+                    </div>
+
                 </div>
 
             {/* <!-- Subtracted square --> */}
 
                 <div className={styles.subtracted__area}>
-                    <h2>Вычитаемая площадь</h2>
+                    <h2 className={styles.subtracted__header}>Вычитаемая площадь</h2>
                     {Array(this.state.substructedCount).fill(0).map(item => (
                         <div className={styles.substructed__container}>
-                            <div className={styles.subtracted__opening}>
+                            <div className={`${styles.subtracted__opening} ${styles.leftBlock}`}>
                                 <select id="subtracted__select" className={styles.subtracted__select} onChange={this.calcArea}>
                                     <option value="3.3108">OП-201(1,78x1,86)</option>
                                     <option value="2.2428">OП-214(1,78x1,26)</option>
@@ -93,13 +97,13 @@ class Calc extends React.Component {
                                     <option value="2.1375">Д-3(2,25х0,95)</option>
                                 </select>
                             </div>
-                            <div className={styles.subtracted__input}>
+                            <div className={`${styles.subtracted__input} ${styles.rightBlock}`}>
                                 <input type="number" className={styles.subtracted__selectQuantity} onChange={this.calcArea}/>
                             </div>
                         </div>
                     ))}
-                    <button className={styles.add__Substructed} onClick={this.addSubArea}>Вычесть еще</button>
-                    <div className={styles.result}>Итоговая площадь составила <span>{this.state.area}</span>м2</div>
+                    <button className={`${styles.add__Substructed} ${styles.leftBlock}`} onClick={this.addSubArea}>Вычесть еще</button>
+                    <div className={styles.result}>Итоговая площадь составила <span>{this.state.area.toFixed(2)}</span>м<sup>2</sup></div>
                 </div>
            </div>
         )
