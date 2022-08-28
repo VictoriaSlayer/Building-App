@@ -1,0 +1,9 @@
+.master__container{
+    margin: 20px 10px;
+}
+
+.jobLink{
+    display: block;
+    font-size: 20px;
+    color: rgb(63, 63, 63);
+}

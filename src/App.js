@@ -5,6 +5,12 @@ import styles from './App.module.css';
 import Companies from './Components/Companies/Companies';
 import MyCalendar from './Components/Calendar/MyCalendar';
 import Calc from './Components/Calc/Calc';
+// Components for Masters
+import Master from './Components/master/Master';
+import WorkSection from './Components/master/WorkSection';
+import CompletedWork from './Components/master/CompletedWork';
+import AllMaterial from './Components/master/AllMaterial';
+// Components for Masters
 import {Routes, Route, Navigate} from "react-router-dom";
 
 import WorkersCounterTable from './Components/WorkersCounter/WorkersCounterTable';
@@ -24,6 +30,10 @@ function App(props) {
                     <Route path={`/gallery/:complex`} element={<Gallery data={pages[0].complexes}/>}/>
                     <Route path={`gallery/:complex/:id`} element={<SwiperSlider />}></Route>
                     <Route path={`calc/:complex/`} element={<Calc />}></Route>
+                    <Route path={`master/:complex`} element={<Master />}></Route>
+                    <Route path={`master/:complex/:worksection`} element={<WorkSection />}></Route>
+                    <Route path={`master/:complex/completedwork/:completedwork`} element={<CompletedWork/>}></Route>
+                    <Route path={`master/:complex/allmaterial/:allmaterial`} element={<AllMaterial/>}></Route>
                 </Routes>
             </div>
             <Footer data={null}/>
