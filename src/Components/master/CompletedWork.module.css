@@ -1,3 +1,42 @@
+.completedWork__container{
+    padding: 20px 10px;
+}
+
 .chosen__employer{
 
+}
+
+.controllers{
+    margin-bottom: 10px;
+}
+
+.finished__work{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.example{
+    margin-top: 10px;
+    width: 220px;
+    /* height: 30px; */
+    line-height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.note{
+    margin-top: 20px;
+}
+
+.green{
+    background-color: rgb(141, 190, 141);
+}
+
+.yellow{
+    background-color: #e8e8a7;
+}
+
+.red{
+    background-color: #ff7575;
 }

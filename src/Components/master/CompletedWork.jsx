@@ -19,23 +19,23 @@ class CompletedWork extends React.Component{
     }
     render(){
         const typeOfWork = [
-            ["Оштукатурил К3, 12 этаж, с "],
-            ["Оштукатурил К3, 14 этаж, с "],
-            ["Оштукатурил К3, 16 этаж, с "],
-            ["Оштукатурил К3, 18 этаж, с "],
-            ["Оштукатурил К3, 20 этаж, с "],
-            ["Оштукатурил К3, 20 этаж, с "],
-            ["Оштукатурил К3, 20 этаж, с "],
-            ["Оштукатурил К3, 20 этаж, с "],
+            ["Оштукатурил К3, 12 этаж, 29.08.22"],
+            ["Оштукатурил К2, 14 этаж, 13.08.22"],
+            ["К2, проложил кабель по АПС техэтаж +5,480"],
+            ["К1, С2, выполнил кладку в МОПе с 9 по 17 этаж"],
+            ["К3, С1, С2, этаж 12, 13, осуществил монтаж вентиляции"],
+            ["К3, С1-3, этаж 5-9, проложил кабель по всем ЭОМ/СС в МОПе"],
+            ["Оштукатурил К3, 21 типовой этаж"],
+            ["К1, -1 этаж, закончил монтаж контура заземления"],
         ];
         const coloredWork = {
-            master: ["green", "green", "green", "yellow" ,"red", "green", "yellow", "green"],
-            osk: ["green", "yellow", "yellow", "yellow" ,"red", "green", "yellow", "green"],
-            pto: ["green", "green", "green", "yellow" ,"green", "green", "red", "red"],
-            tehnadzor: ["red", "red", "green", "yellow" ,"red", "green", "red", "red"],
+            master: ["#8dbe8d", "#8dbe8d", "#8dbe8d", "#e8e8a7" ,"#ff7575", "#8dbe8d", "#e8e8a7", "#8dbe8d"],
+            osk: ["#8dbe8d", "#e8e8a7", "#e8e8a7", "#e8e8a7" ,"#ff7575", "#8dbe8d", "#e8e8a7", "#8dbe8d"],
+            pto: ["#8dbe8d", "#8dbe8d", "#8dbe8d", "#e8e8a7" ,"#8dbe8d", "#8dbe8d", "#ff7575", "#ff7575"],
+            tehnadzor: ["#ff7575", "#ff7575", "#8dbe8d", "#e8e8a7" ,"#ff7575", "#8dbe8d", "#ff7575", "#ff7575"],
         }
         return(
-            <>
+            <div className={styles.completedWork__container}>
             <div className={`${styles.controllers}`}>
                 <select id="subtracted__select" className={styles.chosen__employer} onChange={this.selectedEmployer}>
                     <option value="master">Прораб</option>
@@ -45,10 +45,15 @@ class CompletedWork extends React.Component{
                 </select>
             </div>
             {typeOfWork.map((item, index) => (
+                // console.log(item)
                 <div style={{backgroundColor:coloredWork[this.state.chosenEmployer][index]}} className={`${styles.finished__work} ${styles.bgc}`}>{item}</div>
             ))}
             <Outlet/>
-        </>
+            <div className={styles.note}>Пояснение</div>
+            <div className={`${styles.green} ${styles.example}`}>Работа готова</div>
+            <div className={`${styles.yellow} ${styles.example}`}>Необходимы исправления</div>
+            <div className={`${styles.red} ${styles.example}`}>Необходимо переделывать</div>
+        </div>
         )
     }
 }

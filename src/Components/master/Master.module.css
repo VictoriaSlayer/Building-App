@@ -5,5 +5,11 @@
 .jobLink{
     display: block;
     font-size: 20px;
+}
+
+.master__links{
+    display: block;
+    padding: 0 0 20px;
+    font-size: 24px;
     color: rgb(63, 63, 63);
 }

@@ -17,6 +17,30 @@ let State = {
         objectDelivery: '4 квартал 2023',
         id: 2,
         link: "rejisser"
+    }, {
+        name: 'ЖК Роттердам',
+        address: 'ул. Варшавское шоссе, 37А/1, Москва',
+        objectDelivery: '1 квартал 2025',
+        id: 3,
+        link: "rotterdam"
+    }, {
+        name: 'ЖК Sky Garden',
+        address: 'ул. Строительный проезд, 9, Москва',
+        objectDelivery: '2 квартал 2025',
+        id: 4,
+        link: "skygarden"
+    }, {
+        name: 'ЖК Заречный квартал',
+        address: 'р.п. Заречье, ул. Торговая, МО',
+        objectDelivery: '2 квартал 2024',
+        id: 5,
+        link: "zarechnii"
+    }, {
+        name: 'ЖК Настроение',
+        address: 'ул. Красная Сосна, д. 3, Москва',
+        objectDelivery: '4 квартал 2024',
+        id: 6,
+        link: "nastroenie"
     }], pages: [{
         link: "contractors", complexes: {
             arhitector: {
@@ -87,6 +111,86 @@ let State = {
                     tasks: "",
                 }]
             }, rejisser: {
+                mainCompanies: [{
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                }, {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                }, {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }]
+            }, rotterdam: {
+                mainCompanies: [{
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                }, {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                }, {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }]
+            }, skygarden: {
+                mainCompanies: [{
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                }, {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                }, {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }]
+            }, zarechnii: {
+                mainCompanies: [{
+                    companyType: "Технический заказчик",
+                    companyName: "ФСК Девелопмент",
+                    contacts: "8 (495) 660-15-55",
+                    imgSrc: "",
+                    tasks: ""
+                }, {
+                    companyType: "Генеральный подрядчик",
+                    companyName: "АО МСУ-1",
+                    contacts: "8-(495)-286-76-80",
+                    imgSrc: "",
+                    tasks: ["Отвечает за К1, К2, К3:", "- отделочные работы;", "- ЭОМ/СС;", "- ОВиК/ВК;"]
+                }, {
+                    companyType: "Суб. подрядчик",
+                    companyName: "ООО ФСК Отделочные Технологии",
+                    contacts: "8-(929)-510-09-69",
+                    imgSrc: "",
+                    tasks: "",
+                }]
+            }, nastroenie: {
                 mainCompanies: [{
                     companyType: "Технический заказчик",
                     companyName: "ФСК Девелопмент",
@@ -314,7 +418,7 @@ let State2 = {
             dropdownmenu: {
                 name: 'ЖК Настроение',
                 address: 'ул. Красная Сосна, д. 3, Москва',
-                objectDelivery: '4 кв. 2021 г.',
+                objectDelivery: '4 кв. 2024 г.',
                 id: 6,
                 links: {
                     dropdown: "/nastroenie", object: "/nastroenie/companies", objectZakazchik: "/nastroenie/zakazchik",

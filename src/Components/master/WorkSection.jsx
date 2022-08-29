@@ -14,12 +14,12 @@ function WorkSection(){
 
 
     return(
-        <>
+        <div className={styles.workSection__container}>
             {typeOfWork.map(item => (
                 <Link className={styles.jobLink} to={`${item[1]}`}>{`${item[0]}`}</Link>
             ))}
             <Outlet/>
-        </>
+        </div>
     )
 }
 
