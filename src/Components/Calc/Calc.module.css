@@ -31,7 +31,7 @@
 }
 
 
-.calc__chooseBlock, .input__container, .substructed__container{
+.calc__chooseBlock, .input__container, .subtracted__container{
     display: flex;
 }
 
@@ -70,14 +70,14 @@
     border-radius: 5px;
 }
 
-.perimeter, .blockNumber, .subtracted__selectQuantity{
+.perimeter, .floorNumber, .subtracted__selectQuantity{
     width: 100%;
     height: 100%;
     border: transparent;
     padding: 10px;
 }
 
-.substructed__container{
+.subtracted__container{
     margin-bottom: 15px;
 }
 
@@ -92,14 +92,10 @@
 
 }
 
-.add__Substructed{
+.add__subtracted{
     margin-bottom: 15px;
     padding: 10px;
     border: 2px solid #f0570e;
     border-radius: 5px;
     background-color: #fff;
-}
-
-.substructed__container{
-
 }

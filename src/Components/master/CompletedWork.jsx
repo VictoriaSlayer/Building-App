@@ -1,24 +1,26 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import styles from './CompletedWork.module.css';
-import {Link as div, Outlet} from 'react-router-dom';
+import {Link as div} from 'react-router-dom';
 
 class CompletedWork extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            chosenEmployer: "master",
+            chosenEmployee: "master",
         }
     }
-    selectedEmployer = () =>{
+
+    selectEmployee = () =>{
         let rootNode = ReactDOM.findDOMNode(this);
-        let selected = rootNode.getElementsByClassName(styles.chosen__employer)[0].value;
+        let selected = rootNode.getElementsByClassName(styles.chosen__employee)[0].value;
         this.setState(state => ({
-            chosenEmployer: selected,
+            chosenEmployee: selected,
         }));
     }
+
     render(){
-        const typeOfWork = [
+        const workTypes = [
             ["Оштукатурил К3, 12 этаж, 29.08.22"],
             ["Оштукатурил К2, 14 этаж, 13.08.22"],
             ["К2, проложил кабель по АПС техэтаж +5,480"],
@@ -34,21 +36,20 @@ class CompletedWork extends React.Component{
             pto: ["#8dbe8d", "#8dbe8d", "#8dbe8d", "#e8e8a7" ,"#8dbe8d", "#8dbe8d", "#ff7575", "#ff7575"],
             tehnadzor: ["#ff7575", "#ff7575", "#8dbe8d", "#e8e8a7" ,"#ff7575", "#8dbe8d", "#ff7575", "#ff7575"],
         }
+
         return(
             <div className={styles.completedWork__container}>
             <div className={`${styles.controllers}`}>
-                <select id="subtracted__select" className={styles.chosen__employer} onChange={this.selectedEmployer}>
+                <select id="subtracted__select" className={styles.chosen__employee} onChange={this.selectEmployee}>
                     <option value="master">Прораб</option>
                     <option value="osk">ОСК</option>
                     <option value="pto">ПТО</option>
                     <option value="tehnadzor">Технадзор</option>
                 </select>
             </div>
-            {typeOfWork.map((item, index) => (
-                // console.log(item)
-                <div style={{backgroundColor:coloredWork[this.state.chosenEmployer][index]}} className={`${styles.finished__work} ${styles.bgc}`}>{item}</div>
+            {workTypes.map((item, index) => (
+                <div style={{backgroundColor:coloredWork[this.state.chosenEmployee][index]}} className={`${styles.finished__work}`}>{item}</div>
             ))}
-            <Outlet/>
             <div className={styles.note}>Пояснение</div>
             <div className={`${styles.green} ${styles.example}`}>Работа готова</div>
             <div className={`${styles.yellow} ${styles.example}`}>Необходимы исправления</div>

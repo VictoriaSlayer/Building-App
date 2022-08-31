@@ -1,17 +1,7 @@
 import React from 'react';
 import styles from './AllMaterial.module.css';
-import {Link, Outlet} from 'react-router-dom';
 
 function AllMaterial(){
-    const typeOfWork = [
-        ["Общестрой", "generalWork"],
-        ["Кладка", "masonry"],
-        ["ОВиК", "ovik"],
-        ["ВК", "vk"],
-        ["ЭОМ", "eom"],
-        ["СС", "ss"],
-    ];
-
     const materialQuantity = [
         ["ППГнг(А)-FRHF-660 3х1,5 мм2", "22000", "3200", ],
         ["ППГнг(А)-HF-660 3х10 мм2", "43000", "13200", ],
@@ -30,27 +20,25 @@ function AllMaterial(){
 
     const materialDivArray = [];
 
+    for (let i = 0; i < materialQuantity.length; i++) {
+        if(i === 0){
+                materialDivArray.push(<div className={`${styles.material__name} ${styles.material__cell} ${styles.material__head}`}>Материал</div>);
+                materialDivArray.push(<div className={`${styles.material__quantity} ${styles.material__cell} ${styles.material__head}`}>Кол-во</div>);
+                materialDivArray.push(<div className={`${styles.material__realised} ${styles.material__cell} ${styles.material__head}`}>Сделано</div>);
+                materialDivArray.push(<div className={`${styles.material__balance} ${styles.material__cell} ${styles.material__head}`}>Осталось</div>);
 
-        for (let i = 0; i < materialQuantity.length; i++) {
-            if(i === 0){
-                    materialDivArray.push(<div className={`${styles.material__name} ${styles.material__cell} ${styles.material__head}`}>Материал</div>);
-                    materialDivArray.push(<div className={`${styles.material__quantity} ${styles.material__cell} ${styles.material__head}`}>Кол-во</div>);
-                    materialDivArray.push(<div className={`${styles.material__realised} ${styles.material__cell} ${styles.material__head}`}>Сделано</div>);
-                    materialDivArray.push(<div className={`${styles.material__balance} ${styles.material__cell} ${styles.material__head}`}>Осталось</div>);
 
+                materialDivArray.push(<div className={`${styles.material__name} ${styles.material__cell}`}>{materialQuantity[i][0]}</div>);
+                materialDivArray.push(<div className={`${styles.material__quantity} ${styles.material__cell}`}>{materialQuantity[i][1]}</div>);
+                materialDivArray.push(<div className={`${styles.material__realised} ${styles.material__cell}`}>{materialQuantity[i][2]}</div>);
+                materialDivArray.push(<div className={`${styles.material__balance} ${styles.material__cell}`}>{materialQuantity[i][1] - materialQuantity[i][2]}</div>);
 
-                    materialDivArray.push(<div className={`${styles.material__name} ${styles.material__cell}`}>{materialQuantity[i][0]}</div>);
-                    materialDivArray.push(<div className={`${styles.material__quantity} ${styles.material__cell}`}>{materialQuantity[i][1]}</div>);
-                    materialDivArray.push(<div className={`${styles.material__realised} ${styles.material__cell}`}>{materialQuantity[i][2]}</div>);
-                    materialDivArray.push(<div className={`${styles.material__balance} ${styles.material__cell}`}>{materialQuantity[i][1] - materialQuantity[i][2]}</div>);
-
-                }
-                materialDivArray.push(<div className={`${styles.material__name} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][0]}</div>);
-                materialDivArray.push(<div className={`${styles.material__quantity} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][1]}</div>);
-                materialDivArray.push(<div className={`${styles.material__realised} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][2]}</div>);
-                materialDivArray.push(<div className={`${styles.material__balance} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][1] - materialQuantity[i][2]}</div>);
-
-        }
+            }
+            materialDivArray.push(<div className={`${styles.material__name} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][0]}</div>);
+            materialDivArray.push(<div className={`${styles.material__quantity} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][1]}</div>);
+            materialDivArray.push(<div className={`${styles.material__realised} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][2]}</div>);
+            materialDivArray.push(<div className={`${styles.material__balance} ${styles.material__cell} ${i%2 === 0 ? styles.material__odd : ""}`}>{materialQuantity[i][1] - materialQuantity[i][2]}</div>);
+    }
 
     return(
         <>

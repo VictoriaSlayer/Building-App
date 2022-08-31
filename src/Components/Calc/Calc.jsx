@@ -7,10 +7,9 @@ import styles from "./Calc.module.css";
 class Calc extends React.Component {
     constructor(props){
         super(props);
-
         this.state = {
             area: 0,
-            substructedCount: 3,
+            subtractedCount: 3,
         }
     }
 
@@ -18,21 +17,21 @@ class Calc extends React.Component {
         let calc = ReactDOM.findDOMNode(this);
         let perimeter = calc.getElementsByClassName(styles.perimeter)[0].value;
         let area = perimeter * 3.5;
-        let blockNumber = calc.getElementsByClassName(styles.blockNumber)[0].value;
-        let substructedAreas = calc.getElementsByClassName(styles.subtracted__select);
-        let substructedQuantity = calc.getElementsByClassName(styles.subtracted__selectQuantity);
-        let substructedSum = 0;
-        for(let i = 0; i < substructedAreas.length; i++) {
-            substructedSum += substructedAreas[i].value * substructedQuantity[i].value;
+        let floorNumber = calc.getElementsByClassName(styles.floorNumber)[0].value;
+        let subtractedAreas = calc.getElementsByClassName(styles.subtracted__select);
+        let subtractedQuantity = calc.getElementsByClassName(styles.subtracted__selectQuantity);
+        let subtractedSum = 0;
+        for(let i = 0; i < subtractedAreas.length; i++) {
+            subtractedSum += subtractedAreas[i].value * subtractedQuantity[i].value;
         }
         this.setState(state => ({
-            area: (area - substructedSum) * blockNumber,
+            area: (area - subtractedSum) * floorNumber,
         }));
     }
 
     addSubArea = () => {
         this.setState(state => ({
-            substructedCount: state.substructedCount + 1,
+            subtractedCount: state.subtractedCount + 1,
         }));
     }
 
@@ -68,21 +67,20 @@ class Calc extends React.Component {
                         </div>
                     </div>
                     <div className={styles.input__container}>
-
-                            <div className={`${styles.floors} ${styles.leftBlock}`}>Этажи</div>
-                            <div className={`${styles.input__floors} ${styles.rightBlock}`}>
-                                <input className={styles.blockNumber} type="number" onChange={this.calcArea}/>
-                    </div>
+                        <div className={`${styles.floors} ${styles.leftBlock}`}>Этажи</div>
+                        <div className={`${styles.input__floors} ${styles.rightBlock}`}>
+                            <input className={styles.floorNumber} type="number" onChange={this.calcArea}/>
+                        </div>
                     </div>
 
                 </div>
 
-            {/* <!-- Subtracted square --> */}
+            {/* <!-- Subtracted area --> */}
 
                 <div className={styles.subtracted__area}>
                     <h2 className={styles.subtracted__header}>Вычитаемая площадь</h2>
-                    {Array(this.state.substructedCount).fill(0).map(item => (
-                        <div className={styles.substructed__container}>
+                    {Array(this.state.subtractedCount).fill(0).map(item => (
+                        <div className={styles.subtracted__container}>
                             <div className={`${styles.subtracted__opening} ${styles.leftBlock}`}>
                                 <select id="subtracted__select" className={styles.subtracted__select} onChange={this.calcArea}>
                                     <option value="3.3108">OП-201(1,78x1,86)</option>
@@ -102,7 +100,7 @@ class Calc extends React.Component {
                             </div>
                         </div>
                     ))}
-                    <button className={`${styles.add__Substructed} ${styles.leftBlock}`} onClick={this.addSubArea}>Вычесть еще</button>
+                    <button className={`${styles.add__subtracted} ${styles.leftBlock}`} onClick={this.addSubArea}>Вычесть еще</button>
                     <div className={styles.result}>Итоговая площадь составила <span>{this.state.area.toFixed(2)}</span>м<sup>2</sup></div>
                 </div>
            </div>
